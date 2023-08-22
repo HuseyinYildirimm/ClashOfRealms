@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1778043091}
   m_Layer: 6
   m_Name: Brute
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,3 +132,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 72
+  canMove: 0
+  currentHealth: 0
+  isDead: 0
+  isAttacking: 0

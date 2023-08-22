@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Sorceress
   m_EditorClassIdentifier: 
   character: {fileID: 1058213212354329355, guid: ddae9574a175f1448a56fd3bad22f068, type: 3}
-  ClassType: 1
-  Price: 50
-  spawnTimer: 2
-  MovementSpeed: 150
+  ClassType: 9
+  spawnTimer: 16
+  MovementSpeed: 3
   StopDistance: 2
-  AttackDistance: 5
+  Damage: 30
+  AttackDistance: 8
   AttackTimer: 2
-  MaxHealth: 10
-  CurrentHealth: 10
+  MaxHealth: 100
+  CurrentHealth: 100
+  Price: 400
+  KillReward: 650
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

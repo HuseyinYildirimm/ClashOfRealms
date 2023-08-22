@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: 
   character: {fileID: 1321595848219564559, guid: ef56dd85c5852ff408d2deecbd03d2ff, type: 3}
-  ClassType: 0
-  Price: 25
-  spawnTimer: 5
-  MovementSpeed: 150
+  ClassType: 6
+  spawnTimer: 6
+  MovementSpeed: 1.5
   StopDistance: 2
+  Damage: 25
   AttackDistance: 5
   AttackTimer: 2
-  MaxHealth: 5
-  CurrentHealth: 5
+  MaxHealth: 80
+  CurrentHealth: 80
+  Price: 75
+  KillReward: 100
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

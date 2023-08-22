@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1321595848219564559, guid: ef56dd85c5852ff408d2deecbd03d2ff, type: 3}
   ClassType: 0
-  Price: 25
-  spawnTimer: 5
-  MovementSpeed: 150
+  spawnTimer: 2
+  MovementSpeed: 2
   StopDistance: 2
-  AttackDistance: 5
+  Damage: 5
+  AttackDistance: 2
   AttackTimer: 2
-  MaxHealth: 5
-  CurrentHealth: 5
+  MaxHealth: 10
+  CurrentHealth: 10
+  Price: 15
+  KillReward: 25
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

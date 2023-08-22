@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Hammer
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  ClassType: 0
-  Price: 0
-  spawnTimer: 0
-  MovementSpeed: 0
-  StopDistance: 0
-  AttackDistance: 0
+  ClassType: 5
+  spawnTimer: 4
+  MovementSpeed: 1.5
+  StopDistance: 2
+  Damage: 20
+  AttackDistance: 2
   AttackTimer: 0
-  MaxHealth: 0
-  CurrentHealth: 0
+  MaxHealth: 50
+  CurrentHealth: 50
+  Price: 50
+  KillReward: 65
   LayerMask:
     serializedVersion: 2
     m_Bits: 0

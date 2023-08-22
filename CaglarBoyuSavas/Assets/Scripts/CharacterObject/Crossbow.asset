@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Crossbow
   m_EditorClassIdentifier: 
   character: {fileID: 1058213212354329355, guid: ddae9574a175f1448a56fd3bad22f068, type: 3}
-  ClassType: 1
-  Price: 50
-  spawnTimer: 2
-  MovementSpeed: 150
+  ClassType: 7
+  spawnTimer: 8
+  MovementSpeed: 2.5
   StopDistance: 2
-  AttackDistance: 5
+  Damage: 2
+  AttackDistance: 6
   AttackTimer: 2
-  MaxHealth: 10
-  CurrentHealth: 10
+  MaxHealth: 40
+  CurrentHealth: 40
+  Price: 125
+  KillReward: 175
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

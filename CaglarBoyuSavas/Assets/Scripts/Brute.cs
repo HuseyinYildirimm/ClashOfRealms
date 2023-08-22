@@ -8,4 +8,8 @@ public class Brute : Character
     {
        //special ability
     }
+    public void Update()
+    {
+      
+    }
 }

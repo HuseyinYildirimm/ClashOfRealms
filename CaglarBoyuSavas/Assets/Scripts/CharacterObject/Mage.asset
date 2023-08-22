@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648d469e8df7f9343b5d1de292a3ecf4, type: 3}
   m_Name: Mage
   m_EditorClassIdentifier: 
-  character: {fileID: 1058213212354329355, guid: ddae9574a175f1448a56fd3bad22f068, type: 3}
-  ClassType: 1
-  Price: 50
-  spawnTimer: 2
-  MovementSpeed: 150
+  character: {fileID: 1058213212354329355, guid: fa7d3cdd65fc76d40bed99f88adc6917, type: 3}
+  ClassType: 4
+  spawnTimer: 8
+  MovementSpeed: 2
   StopDistance: 2
-  AttackDistance: 5
+  Damage: 10
+  AttackDistance: 6
   AttackTimer: 2
-  MaxHealth: 10
-  CurrentHealth: 10
+  MaxHealth: 25
+  CurrentHealth: 25
+  Price: 250
+  KillReward: 400
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

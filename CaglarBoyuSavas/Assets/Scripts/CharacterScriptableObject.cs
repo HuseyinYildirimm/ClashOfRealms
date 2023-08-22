@@ -9,12 +9,11 @@ public class CharacterScriptableObject : ScriptableObject
     [Header("ClassType")]
     public GameObject character;
     public ClassType ClassType;
-    public float Price;
 
     [Space(10)]
 
     [Header("Spawn")]
-    [Range(0,10)] public float spawnTimer;
+    [Range(0,20)] public float spawnTimer;
 
     [Space(10)]
 
@@ -25,6 +24,7 @@ public class CharacterScriptableObject : ScriptableObject
     [Space(10)]
 
     [Header("Attack")]
+    public float Damage;
     public float AttackDistance;
     public float AttackTimer;
 
@@ -33,6 +33,12 @@ public class CharacterScriptableObject : ScriptableObject
     [Header("Health")]
     public float MaxHealth;
     public float CurrentHealth;
+
+    [Space(10)]
+
+    [Header("Gold")]
+    public float Price;
+    public float KillReward;
 
     [Space(10)]
     public LayerMask LayerMask;

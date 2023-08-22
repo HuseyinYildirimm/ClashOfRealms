@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   character: {fileID: 1058213212354329355, guid: ddae9574a175f1448a56fd3bad22f068, type: 3}
-  ClassType: 1
-  Price: 50
-  spawnTimer: 2
-  MovementSpeed: 150
+  ClassType: 8
+  spawnTimer: 12
+  MovementSpeed: 2
   StopDistance: 2
+  Damage: 0
   AttackDistance: 5
   AttackTimer: 2
-  MaxHealth: 10
-  CurrentHealth: 10
+  MaxHealth: 60
+  CurrentHealth: 60
+  Price: 200
+  KillReward: 300
   LayerMask:
     serializedVersion: 2
     m_Bits: 72
