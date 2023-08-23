@@ -13,74 +13,47 @@ public class AICharacterSpawn : MonoBehaviour
     public Transform spawnPoint;
     [SerializeField] private CharacterScriptableObject[] charactersToSpawn; 
 
-    private List<GameObject> spawnedCharacters = new List<GameObject>();
-    private int currentLevel = 1;
+    private List<GameObject> AIspawnedCharacters = new List<GameObject>();
+    private int currentLevel = 0;
     
     [Header("Time")]
     private bool isTimerStarted = false;
     private float timer = 0.0f;
     private float spawnTimer;
-    private float spawnInterval = 5.0f;
     private float minTime = 1f;
-    private float maxTime = 10f;
+    private float maxTime =5f;
 
     public void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
+      
         //sort by price
         charactersToSpawn = charactersToSpawn.OrderBy(character => character.Price).ToArray();
+     
         AISpawnCharacter();
-
-        spawnInterval = Random.Range(minTime, maxTime);
     }
-
-    private void SetSpawnTimer()
+    
+    public void FixedUpdate()
     {
-        spawnTimer = Random.Range(minTime, maxTime);
-        maxTime -= 0.1f * Time.deltaTime;
-        maxTime = Mathf.Max(minTime, maxTime); 
-    }
+        LevelControlByMoney();
 
-    private void Update()
-    {
-        spawnTimer -= Time.deltaTime;
-
-        if (spawnTimer <= 0)
+        //queue-move control
+        for (int i = 0; i < AIspawnedCharacters.Count; i++)
         {
-            isTimerStarted = true;
-            SetSpawnTimer();
-        }
-
-
-        if (isTimerStarted)
-        {
-            timer += Time.deltaTime;
-
-            if (spawnTimer > 0f) spawnTimer -= Time.deltaTime * 2;
-
-            if (spawnTimer <= 0f)
-            {
-                AISpawnCharacter();
-            }
-        }
-
-        for (int i = 0; i < spawnedCharacters.Count; i++)
-        {
-            Character character = spawnedCharacters[i].GetComponent<Character>();
+            Character character = AIspawnedCharacters[i].GetComponent<Character>();
 
             if (character.isDead)
             {
-                Destroy(spawnedCharacters[i]);
-                spawnedCharacters.RemoveAt(i);
+                Destroy(AIspawnedCharacters[i]);
+                AIspawnedCharacters.RemoveAt(i);
                 i--;
                 break;
             }
 
             if (i > 0)
             {
-                Vector3 previousPosition = spawnedCharacters[i - 1].transform.position;
-                Vector3 currentPosition = spawnedCharacters[i].transform.position;
+                Vector3 previousPosition = AIspawnedCharacters[i - 1].transform.position;
+                Vector3 currentPosition = AIspawnedCharacters[i].transform.position;
 
                 float distance = Vector3.Distance(previousPosition, currentPosition);
 
@@ -95,45 +68,60 @@ public class AICharacterSpawn : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        spawnTimer -= Time.deltaTime;
+
+        if (spawnTimer <= 0) isTimerStarted = true;
+      
+        if (isTimerStarted)
+        {
+            timer += Time.deltaTime;
+
+            if (spawnTimer > 0f) spawnTimer -= Time.deltaTime * 2;
+
+            if (spawnTimer <= 0f) AISpawnCharacter();
+        }
+    }
+
+    void LevelControlByMoney()
+    {
+        if (gameManager.AImoney > 400) currentLevel = Random.Range(2,4);
+
+        else if (gameManager.AImoney > 300) currentLevel = Random.Range(1, 3);
+
+        else if (gameManager.AImoney > 200) currentLevel = Random.Range(0, 2);
+
+        else if (gameManager.AImoney > 100) currentLevel = Random.Range(0, 1);
+
+        else currentLevel = 0;
+    }
+
     private void AISpawnCharacter()
     {
         isTimerStarted = false;
-        CharacterScriptableObject selectedCharacter = GetHighestAffordableCharacter();
-
+        CharacterScriptableObject selectedCharacter = GetAffordableCharacter();
+      
         if (selectedCharacter != null)
         {
             GameObject newCharacter = Instantiate(selectedCharacter.character, spawnPoint.position, Quaternion.identity, spawnPoint);
-            spawnedCharacters.Add(newCharacter);
+            AIspawnedCharacters.Add(newCharacter);
             newCharacter.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             newCharacter.tag = "Enemy";
 
-            spawnTimer = selectedCharacter.spawnTimer;
+            //Difficulty Level settings
+            spawnTimer = selectedCharacter.spawnTimer; //spawnTimer = Random.Range(1,5);
             gameManager.AImoney -= selectedCharacter.Price;
-
-            if (gameManager.AImoney > selectedCharacter.Price * 2) currentLevel++;
-
-            else currentLevel = Mathf.Max(currentLevel - 1, 1);
-          
         }
-        else Debug.Log("Yeterli para yok.");
     }
 
-    private CharacterScriptableObject GetHighestAffordableCharacter()
+    private CharacterScriptableObject GetAffordableCharacter()
     {
-        CharacterScriptableObject highestAffordableCharacter = null;
+        CharacterScriptableObject selectedCharacter = null;
 
-        foreach (CharacterScriptableObject character in charactersToSpawn)
-        {
-            if (gameManager.AImoney >= character.Price && (highestAffordableCharacter == null
-                || character.Price > highestAffordableCharacter.Price))
-            {
-                highestAffordableCharacter = character;
-            }
-        }
-
-        return highestAffordableCharacter;
+        selectedCharacter = charactersToSpawn[currentLevel];
+      
+        return selectedCharacter;
     }
-
-
 }
 

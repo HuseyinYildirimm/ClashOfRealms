@@ -17,13 +17,14 @@ MonoBehaviour:
   spawnTimer: 4
   MovementSpeed: 2.5
   StopDistance: 2
-  Damage: 3
+  Damage: 4
   AttackDistance: 3
-  AttackTimer: 0
+  AttackTimer: 1
   MaxHealth: 12
   CurrentHealth: 12
   Price: 50
   KillReward: 80
+  Exp: 300
   LayerMask:
     serializedVersion: 2
     m_Bits: 0

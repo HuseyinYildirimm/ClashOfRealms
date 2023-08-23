@@ -39,6 +39,7 @@ public class CharacterScriptableObject : ScriptableObject
     [Header("Gold")]
     public float Price;
     public float KillReward;
+    public float Exp;
 
     [Space(10)]
     public LayerMask LayerMask;

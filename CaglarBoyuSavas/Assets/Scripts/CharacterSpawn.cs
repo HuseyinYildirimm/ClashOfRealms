@@ -13,7 +13,7 @@ public class CharacterSpawn : MonoBehaviour
     private CharacterScriptableObject pendingCharacter;
     private bool isTimerStarted = false;
     private float timer = 0.0f;
-    private List<GameObject> spawnedCharacters = new List<GameObject>();
+    public List<GameObject> spawnedCharacters = new List<GameObject>();
 
 
     public void Start()

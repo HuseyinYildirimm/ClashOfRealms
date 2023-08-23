@@ -19,11 +19,12 @@ MonoBehaviour:
   StopDistance: 2
   Damage: 30
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   MaxHealth: 100
   CurrentHealth: 100
   Price: 400
   KillReward: 650
+  Exp: 1000
   LayerMask:
     serializedVersion: 2
     m_Bits: 72
