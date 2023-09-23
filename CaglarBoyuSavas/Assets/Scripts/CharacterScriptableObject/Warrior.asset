@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648d469e8df7f9343b5d1de292a3ecf4, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  character: {fileID: 3342214424486675030, guid: ddae9574a175f1448a56fd3bad22f068, type: 3}
+  ClassType: 1
+  spawnTimer: 1.5
+  MovementSpeed: 2
+  StopDistance: 2.75
+  Damage: 6
+  AttackDistance: 2.9
+  AttackTimer: 2
+  MaxHealth: 25
+  CurrentHealth: 27
+  Price: 25
+  KillReward: 40
+  Exp: 200
+  AttackSound: {fileID: 8300000, guid: 8a29bdef93c9b5a4398f02a367f5a309, type: 3}
+  TakeDamageSound: {fileID: 8300000, guid: 2f216803227ab774cae4497ebb942df9, type: 3}
+  DyingSound: {fileID: 8300000, guid: 47576a5b4c2e5c846a12e398f07982bf, type: 3}
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 72

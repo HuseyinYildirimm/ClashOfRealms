@@ -8,6 +8,6 @@ public enum ClassType
     Hammer,
     Knight,
     Crossbow,
-    Wizard,
+    Swordsman,
     Sorceress
 }

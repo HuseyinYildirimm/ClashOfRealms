@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648d469e8df7f9343b5d1de292a3ecf4, type: 3}
+  m_Name: Crossbow
+  m_EditorClassIdentifier: 
+  character: {fileID: 4245731386244270744, guid: 109c144ab1475f348ad6b05f3674d65e, type: 3}
+  ClassType: 7
+  spawnTimer: 6
+  MovementSpeed: 2
+  StopDistance: 2
+  Damage: 15
+  AttackDistance: 7
+  AttackTimer: 1
+  MaxHealth: 40
+  CurrentHealth: 40
+  Price: 650
+  KillReward: 750
+  Exp: 800
+  AttackSound: {fileID: 8300000, guid: 4a39e49e3bdcf614683f16098b3e1993, type: 3}
+  TakeDamageSound: {fileID: 8300000, guid: 5ea23b3ee69f5fd499301fb685368d9f, type: 3}
+  DyingSound: {fileID: 8300000, guid: 72f5d172c3cb80a4c844b0b1c678fee3, type: 3}
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 72

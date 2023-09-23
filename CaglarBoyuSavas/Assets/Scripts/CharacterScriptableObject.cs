@@ -42,9 +42,19 @@ public class CharacterScriptableObject : ScriptableObject
     public float Exp;
 
     [Space(10)]
+
+    [Header("Sounds")]
+    public AudioClip AttackSound;
+    public AudioClip TakeDamageSound;
+    public AudioClip DyingSound;
+
+
+    [Space(10)]
     public LayerMask LayerMask;
 
 
-   
-
+    public void Reset()
+    {
+        CurrentHealth = MaxHealth;
+    }
 }

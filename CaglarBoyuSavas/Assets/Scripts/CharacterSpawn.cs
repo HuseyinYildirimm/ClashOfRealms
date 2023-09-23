@@ -8,17 +8,17 @@ public class CharacterSpawn : MonoBehaviour
 
     public Transform spawnPoint;
     public Slider SpawnSlider;
-    public float minDistance = 2.0f; 
+    public float minDistance; 
 
     private CharacterScriptableObject pendingCharacter;
     private bool isTimerStarted = false;
     private float timer = 0.0f;
     public List<GameObject> spawnedCharacters = new List<GameObject>();
 
-
     public void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     private void Update()
@@ -41,7 +41,6 @@ public class CharacterSpawn : MonoBehaviour
 
             if (character.isDead)
             {
-                Destroy(spawnedCharacters[i]);
                 spawnedCharacters.RemoveAt(i);
                 i--; 
                 break;
@@ -53,6 +52,7 @@ public class CharacterSpawn : MonoBehaviour
                 Vector3 currentPosition = spawnedCharacters[i].transform.position;
 
                 float distance = Vector3.Distance(previousPosition, currentPosition);
+                minDistance = character.character.StopDistance;
 
                 if (distance < minDistance) character.canMove = false;
 
@@ -70,23 +70,29 @@ public class CharacterSpawn : MonoBehaviour
         gameManager.money -= pendingCharacter.Price;
         isTimerStarted = false;
         SpawnSlider.value = SpawnSlider.maxValue;
+        pendingCharacter.Reset();
 
         GameObject newCharacter = Instantiate(pendingCharacter.character, spawnPoint.position, Quaternion.identity, spawnPoint);
         spawnedCharacters.Add(newCharacter);
         newCharacter.tag = "Character";
-
+        
         pendingCharacter = null;
     }
 
     public void OnButtonClick(CharacterScriptableObject characterobj)
     {
         if (isTimerStarted) return;
+
         pendingCharacter = characterobj;
-        SpawnSlider.maxValue = pendingCharacter.spawnTimer;
-        SpawnSlider.value = SpawnSlider.maxValue;
-        pendingCharacter.CurrentHealth = pendingCharacter.MaxHealth;
-        Debug.Log(pendingCharacter.name);
-        isTimerStarted = true;
-        timer = 0.0f;
+
+        if(characterobj.Price < gameManager.money && SpawnSlider.value ==SpawnSlider.maxValue)
+        {
+            SpawnSlider.maxValue = pendingCharacter.spawnTimer;
+            SpawnSlider.value = SpawnSlider.maxValue;
+            pendingCharacter.CurrentHealth = pendingCharacter.MaxHealth;
+            isTimerStarted = true;
+            timer = 0.0f;
+        }
+        else Debug.Log("insufficient money !!!");
     }
 }
