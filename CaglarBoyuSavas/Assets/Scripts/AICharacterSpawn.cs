@@ -74,11 +74,12 @@ public class AICharacterSpawn : MonoBehaviour
 
     void LevelControlByMoney()
     {
+        Debug.Log(currentLevel);
         if (gameManager.AIexp > 4000)
         {
             AILevelUp = true;
             baseLevel = 1;
-            if (gameManager.AImoney > 900) currentLevel = Random.Range(8, 9);
+            if (gameManager.AImoney > 900) currentLevel = Random.Range(8, 10);
 
             else if (gameManager.AImoney > 600) currentLevel = Random.Range(6, 7);
 
@@ -98,9 +99,6 @@ public class AICharacterSpawn : MonoBehaviour
 
             else currentLevel = 0;
         }
-        
-
-       
     }
 
     void SpawnTimeControl()
@@ -158,17 +156,17 @@ public class AICharacterSpawn : MonoBehaviour
             {
                 if (currentLevel > 6)
                 {
-                    selectedCharacter.CurrentHealth += 4;
+                    selectedCharacter.CurrentHealth += 5;
                     spawnTimer = Random.Range(3, 6);
                 }
                 else if (currentLevel > 3)
                 {
-                    selectedCharacter.CurrentHealth += 3;
+                    selectedCharacter.CurrentHealth += 4;
                     spawnTimer = Random.Range(4, 7);
                 }
                 else
                 {
-                    selectedCharacter.CurrentHealth += 2;
+                    selectedCharacter.CurrentHealth += 3;
                     spawnTimer = Random.Range(5, 8);
                 }
             }
@@ -176,17 +174,17 @@ public class AICharacterSpawn : MonoBehaviour
             {
                 if (currentLevel > 6)
                 {
-                    selectedCharacter.CurrentHealth += 7;
+                    selectedCharacter.CurrentHealth += 9;
                     spawnTimer = Random.Range(3, 5);
                 }
                 else if (currentLevel > 3)
                 {
-                    selectedCharacter.CurrentHealth += 5;
+                    selectedCharacter.CurrentHealth += 7;
                     spawnTimer = Random.Range(4, 6);
                 }
                 else
                 {
-                    selectedCharacter.CurrentHealth += 3;
+                    selectedCharacter.CurrentHealth += 5;
                     spawnTimer = Random.Range(5, 7);
                 }
             }

@@ -21,6 +21,20 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
 
+    [Header("Health")]
+    public float BaseMaxHealth = 1000;
+    public float BaseCurrentHealth;
+    public Image basehealthBar;
+
+    [Space(10)]
+
+    public float EnemyMaxHealth = 1000;
+    public float EnemyCurrentHealth;
+    public Image enemyBaseHealthBar;
+    public float lerpspeed;
+
+    [Space(10)]
+
     [Header("MONEY & EXP")]
     public GameObject moneyObj;
     public float money;
@@ -32,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     [Header("TMP")]
     public TextMeshProUGUI moneyAmount;
+    public TextMeshProUGUI moneyRise;
     public TextMeshProUGUI expAmount;
     public TextMeshProUGUI AImoneyAmount;
     public TextMeshProUGUI DamageValue;
@@ -48,24 +63,27 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
 
-    [Header("SOUND")]
-    public AudioClip GameMusicAC;
-    private AudioSource GameMusicAS;
+    [Header("PARTICLE")]
+    public GameObject bloodEffect;
 
     public void Start()
     {
         aiLevel = GetComponent<AICharacterSpawn>();
-        GameMusicAS = GetComponent<AudioSource>();
 
         Level1.SetActive(true);
         Level2.SetActive(false);
         Level1Base.SetActive(true);
         Level2Base.SetActive(false);
-        GameMusicAS.Play();
+
+        EnemyCurrentHealth = EnemyMaxHealth;
+        BaseCurrentHealth = BaseMaxHealth;
+        
     }
 
     public void Update()
     {
+        Health();
+
         #region Money
 
         AImoneyAmount.text = AImoney.ToString("F0");
@@ -107,11 +125,16 @@ public class GameManager : MonoBehaviour
         Level1Base.SetActive(false);
         Level2Base.SetActive(true);
 
-
         BaseLevelButton.SetActive(false);
         oldAgeButtons.SetActive(false);
         newAgeButtons.SetActive(true);
     }
 
+    public void Health()
+    {
+        basehealthBar.fillAmount = Mathf.Lerp(basehealthBar.fillAmount, BaseCurrentHealth / BaseMaxHealth, lerpspeed);
 
+        enemyBaseHealthBar.fillAmount = Mathf.Lerp(enemyBaseHealthBar.fillAmount, EnemyCurrentHealth / EnemyMaxHealth, lerpspeed);
+    }
+   
 }

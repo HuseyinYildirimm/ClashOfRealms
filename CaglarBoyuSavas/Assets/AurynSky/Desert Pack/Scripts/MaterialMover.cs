@@ -5,15 +5,21 @@ using UnityEngine;
 public class MaterialMover : MonoBehaviour
 {
 
-    public float scrollSpeed = 0.5F;
-    public Renderer rend;
+    public float scrollSpeed = 0.5f;
+
+    private Renderer rend;
+    private Vector2 offset;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
+        offset = rend.material.mainTextureOffset;
     }
+
     void Update()
     {
-        float offset = Time.time * scrollSpeed;
-        rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
+        // Mesh offsetini sürekli olarak hareket ettir
+        offset.y += scrollSpeed * Time.deltaTime;
+        rend.material.mainTextureOffset = offset;
     }
 }

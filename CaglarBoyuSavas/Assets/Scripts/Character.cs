@@ -11,8 +11,10 @@ public abstract class Character : MonoBehaviour
     protected Rigidbody rb;
     public CharacterScriptableObject character;
     private GameManager gameManager;
-
+    private AudioManager audioManager;
+    public BloodObjectPool bloodOjbect;
     private Character targetCharacter;
+
     public float currentHealth;
     [Space(10)]
 
@@ -34,7 +36,10 @@ public abstract class Character : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         collider = GetComponent<CapsuleCollider>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        bloodOjbect = GameObject.Find("BloodObjectPool").GetComponent<BloodObjectPool>();
 
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        
         currentHealth = character.CurrentHealth;
     }
 
@@ -54,6 +59,7 @@ public abstract class Character : MonoBehaviour
         {
             if ((hit.collider.CompareTag("Base") && gameObject.CompareTag("Enemy")) || hit.collider.CompareTag("EnemyBase") && gameObject.CompareTag("Character")) baseControl = true;
         }
+       
     }
 
     #region Movement
@@ -106,6 +112,16 @@ public abstract class Character : MonoBehaviour
                     audioSource.PlayOneShot(character.AttackSound);
 
                     StartCoroutine(AttackTimer());
+
+                    if (collider.gameObject.CompareTag("Base"))
+                    {
+                        gameManager.BaseCurrentHealth -= character.Damage;
+                    }
+                    else if (collider.gameObject.CompareTag("EnemyBase"))
+                    {
+                        gameManager.EnemyCurrentHealth -= character.Damage;
+                    }
+
                 }
             }
         }
@@ -134,14 +150,21 @@ public abstract class Character : MonoBehaviour
 
         audioSource.PlayOneShot(character.TakeDamageSound);
 
-        if (currentHealth <= 0)
+        bloodOjbect.ActivateBloodEffect(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), transform.rotation);
+        
+        if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
             audioSource.PlayOneShot(character.DyingSound);
-            collider.enabled = false;
-            anim.Play("Death");
-            Destroy(gameObject, 2f);
 
+            anim.Play("Death");
+            collider.enabled = false;
+            rb.isKinematic = false;
+            rb.useGravity = true;
+
+            Destroy(gameObject, 4f);
+
+            if (gameObject.CompareTag("Enemy")) audioManager.Play("CoinSound");
 
 
             if (gameObject.CompareTag("Enemy"))
@@ -149,26 +172,36 @@ public abstract class Character : MonoBehaviour
                 gameManager.exp += character.Exp;
 
                 gameManager.money += character.KillReward;
-               
+                gameManager.moneyRise.text = "+"+character.KillReward.ToString("F0");
+                StartCoroutine(UISettings());
+
                 #region MoneyValueText
 
                 Vector3 moneyObj = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+                Vector3 moneyTarget = new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z);
 
                 GameObject moneyClone = Instantiate(gameManager.moneyObj, moneyObj, Quaternion.identity, gameManager.transform);
-                moneyClone.transform.DOMove(GetIconPosition(gameManager.iconTransform.position), 2).SetEase(Ease.OutCubic);
+
+                moneyClone.transform.DOMove(GetIconPosition(moneyTarget), 2).SetEase(Ease.OutCubic);
+                moneyClone.transform.DORotate(new Vector3(0f, 720f, 0f), 2, RotateMode.FastBeyond360);
+
                 Destroy(moneyClone, 1.8f);
 
                 #endregion
             }
             else
             {
-                gameManager.AIexp += character.Exp;
+                #region DifficultyLevel
 
-                if (gameManager.difficultyLevel == 0) gameManager.AImoney += character.KillReward * 1.2f;
+                gameManager.AIexp += character.Exp* 1.3f;
 
-                else if(gameManager.difficultyLevel == 1) gameManager.AImoney += character.KillReward * 1.5f;
+                if (gameManager.difficultyLevel == 0) gameManager.AImoney += character.KillReward * 1.3f;
 
-                else gameManager.AImoney += character.KillReward * 2f;
+                else if(gameManager.difficultyLevel == 1) gameManager.AImoney += character.KillReward * 1.8f;
+
+                else gameManager.AImoney += character.KillReward * 2.3f;
+
+                #endregion
             }
         }
 
@@ -208,5 +241,12 @@ public abstract class Character : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, character.AttackDistance);
         Gizmos.DrawRay(transform.position, transform.right);
+    }
+
+
+    IEnumerator UISettings()
+    {
+        yield return new WaitForSeconds(1f);
+        gameManager.moneyRise.text = null;
     }
 }

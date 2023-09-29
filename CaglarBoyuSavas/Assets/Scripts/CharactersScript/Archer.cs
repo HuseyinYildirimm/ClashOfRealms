@@ -6,7 +6,7 @@ using UnityEngine.Animations.Rigging;
 public class Archer : Character
 {
     public Rig rig;
-    
+    public GameObject arrow;
 
     protected override void UseAbility()
     {

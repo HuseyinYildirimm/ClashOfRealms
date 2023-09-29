@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   character: {fileID: 11400000, guid: 75a78d7ab48386b41b0fb58f11eb0a40, type: 2}
+  bloodOjbect: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -89,6 +90,7 @@ MonoBehaviour:
   isAttacking: 0
   archerAttacking: 0
   rig: {fileID: 1893141837287162741}
+  arrow: {fileID: 6315468707887221544}
 --- !u!82 &9155969975850548968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -101,7 +103,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -734,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696761917582454189, guid: 6113d0ea44252774db53fa756483807d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5370867191198894114, guid: 6113d0ea44252774db53fa756483807d, type: 3}
       propertyPath: m_Layer
@@ -1126,5 +1128,10 @@ Transform:
 --- !u!4 &1624477029609323631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400106, guid: 6113d0ea44252774db53fa756483807d, type: 3}
+  m_PrefabInstance: {fileID: 1624477029609186949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6315468707887221544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4696761917582454189, guid: 6113d0ea44252774db53fa756483807d, type: 3}
   m_PrefabInstance: {fileID: 1624477029609186949}
   m_PrefabAsset: {fileID: 0}

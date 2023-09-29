@@ -1813,6 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   character: {fileID: 11400000, guid: 1baf5130f185bd447817c7e1ee307ec0, type: 2}
+  bloodOjbect: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -1833,7 +1834,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Editor", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.SkyboxCubemapExtended.Editor", "Boxophobic.SkyboxCubemapExtended.Editor.csproj", "{1F0CD481-FDD5-97E5-84B5-F50FBEED4A62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B68D8322-CF20-89B8-A50D-40B3C765F16C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{1F0CD481-FDD5-97E5-84B5-F50FBEED4A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F0CD481-FDD5-97E5-84B5-F50FBEED4A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F0CD481-FDD5-97E5-84B5-F50FBEED4A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68D8322-CF20-89B8-A50D-40B3C765F16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68D8322-CF20-89B8-A50D-40B3C765F16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68D8322-CF20-89B8-A50D-40B3C765F16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68D8322-CF20-89B8-A50D-40B3C765F16C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

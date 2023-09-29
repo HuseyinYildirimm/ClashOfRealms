@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   character: {fileID: 11400000, guid: 449fbfda11df6f84787a89d05078e739, type: 2}
+  bloodOjbect: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -100,7 +101,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -459,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2684684ae442e0e4c98b0e64a58902e7, type: 2}
+    - target: {fileID: 9500000, guid: e9332b82da4812a49916bf8fc87b2332, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9332b82da4812a49916bf8fc87b2332, type: 3}
 --- !u!4 &3367984619898769302 stripped

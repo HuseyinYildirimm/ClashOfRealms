@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1623600500991535372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2378706740289343186}
+  - component: {fileID: 3465892097540356665}
+  - component: {fileID: 5829267972325284870}
+  m_Layer: 7
+  m_Name: DesertDoorRight_BLUE (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2378706740289343186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623600500991535372}
+  m_LocalRotation: {x: -0, y: 0.70639145, z: -0, w: 0.70782137}
+  m_LocalPosition: {x: -2.61, y: 2.138, z: 2.086}
+  m_LocalScale: {x: 3.42, y: 1.18, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7798045744607280433}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 89.884, z: 0}
+--- !u!33 &3465892097540356665
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623600500991535372}
+  m_Mesh: {fileID: 4300000, guid: 2ecf61b24ed19d54a917c84ef9d9872f, type: 3}
+--- !u!23 &5829267972325284870
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623600500991535372}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d1cd4e374989edf4a9cdf2626ff507da, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7794716013459242923
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +94,7 @@ GameObject:
   - component: {fileID: 7793011291669834753}
   - component: {fileID: 7804880130155096473}
   - component: {fileID: 7817299075293739635}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +177,7 @@ GameObject:
   - component: {fileID: 7793112143889160821}
   - component: {fileID: 7808520169362803909}
   - component: {fileID: 7817409491073476191}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertDoorLeft_BLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,14 +191,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7794923931075630295}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.26, y: 1.7252, z: 2.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.74393195, z: -0, w: 0.6682555}
+  m_LocalPosition: {x: 1.18, y: 1.7252, z: 2.55}
+  m_LocalScale: {x: 2.12, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7798045744607280433}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -96.135, z: 0}
 --- !u!33 &7808520169362803909
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -144,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 2100000, guid: 2ef39c184abf89848ba6b8a836f919fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +260,7 @@ GameObject:
   - component: {fileID: 7798373272736248313}
   - component: {fileID: 7804765091518639023}
   - component: {fileID: 7817221203751856009}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +344,7 @@ GameObject:
   - component: {fileID: 7808594238427620669}
   - component: {fileID: 7816880346986664977}
   - component: {fileID: 3397518884700661319}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertCastle_Blue
   m_TagString: Base
   m_Icon: {fileID: 0}
@@ -275,9 +358,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7795095829495585793}
-  m_LocalRotation: {x: -0, y: -0.70878595, z: -0, w: 0.7054237}
+  m_LocalRotation: {x: 0, y: -0.7087832, z: 0, w: 0.7054264}
   m_LocalPosition: {x: 0.9397993, y: -2.62, z: 4.53}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7793394301566353415}
@@ -285,6 +368,8 @@ Transform:
   - {fileID: 7798373272736248313}
   - {fileID: 7793010293464202111}
   - {fileID: 7793112143889160821}
+  - {fileID: 2378706740289343186}
+  - {fileID: 2947830729923987417}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.272, z: 0}
@@ -295,7 +380,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7795095829495585793}
-  m_Mesh: {fileID: 4300000, guid: 37f7476af8f447b42b3d4beef9b2c469, type: 3}
+  m_Mesh: {fileID: -8130333646717832371, guid: a72a9ec6d2422934286368ebe07f5cc0, type: 3}
 --- !u!23 &7816880346986664977
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -362,7 +447,7 @@ GameObject:
   - component: {fileID: 7793394301566353415}
   - component: {fileID: 7808517711174264509}
   - component: {fileID: 7817184712542009787}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +530,7 @@ GameObject:
   - component: {fileID: 7793010293464202111}
   - component: {fileID: 7808534494320188821}
   - component: {fileID: 7816739382948114959}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DesertDoorRight_BLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,14 +544,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7795343333303654949}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.32, y: 1.7243, z: 2.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.8276373, z: -0, w: 0.56126326}
+  m_LocalPosition: {x: -1.18, y: 1.7243, z: 2.55}
+  m_LocalScale: {x: 1.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7798045744607280433}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 111.714, z: 0}
 --- !u!33 &7808534494320188821
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -495,7 +580,90 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 2100000, guid: 2ef39c184abf89848ba6b8a836f919fc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9075523127772113286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2947830729923987417}
+  - component: {fileID: 6044595603841649294}
+  - component: {fileID: 9168131917842470934}
+  m_Layer: 7
+  m_Name: DesertDoorRight_BLUE (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2947830729923987417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075523127772113286}
+  m_LocalRotation: {x: -0, y: 0.0026531217, z: -0, w: 0.99999654}
+  m_LocalPosition: {x: -2.75, y: 2.103, z: -2.12}
+  m_LocalScale: {x: 3.42, y: 1.15, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7798045744607280433}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0.304, z: 0}
+--- !u!33 &6044595603841649294
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075523127772113286}
+  m_Mesh: {fileID: 4300000, guid: 2ecf61b24ed19d54a917c84ef9d9872f, type: 3}
+--- !u!23 &9168131917842470934
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075523127772113286}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 4294967295
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d1cd4e374989edf4a9cdf2626ff507da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
