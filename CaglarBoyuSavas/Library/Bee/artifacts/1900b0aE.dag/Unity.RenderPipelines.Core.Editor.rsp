@@ -348,7 +348,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Store/UnityTechnologies/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.11/Editor/AdditionalPropertiesPreferences.cs"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.11/Editor/AdditionalPropertiesState.cs"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.11/Editor/Camera/CameraUI.Drawers.cs"

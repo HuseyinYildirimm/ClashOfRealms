@@ -60,11 +60,22 @@ public class GameManager : MonoBehaviour
     public GameObject oldAgeButtons;
     public GameObject newAgeButtons;
     bool isLevelUp;
+    bool isEnemeyLevelUp;
 
     [Space(10)]
 
     [Header("PARTICLE")]
     public GameObject bloodEffect;
+
+    [Space(10)]
+
+    [Header("CHEST")]
+    public Animator desertChest;
+    public Transform desertCoinFirstTarget;
+    public Transform desertcoinSecondlyTarget;
+    public Animator darkChest;
+    public Transform darkCoinFirstTarget;
+    public Transform darkCoinSecondlyTarget;
 
     public void Start()
     {
@@ -77,11 +88,11 @@ public class GameManager : MonoBehaviour
 
         EnemyCurrentHealth = EnemyMaxHealth;
         BaseCurrentHealth = BaseMaxHealth;
-        
     }
 
     public void Update()
     {
+
         Health();
 
         #region Money
@@ -100,14 +111,19 @@ public class GameManager : MonoBehaviour
 
         if (isLevelUp)
         {
-            if (exp >= 5000f)
+            if (exp >= 6000f)
             {
                 LevelUp();
+                isLevelUp = false;
             }
             else isLevelUp = false;
         }
-        if (aiLevel.AILevelUp)
+        if (aiLevel.AILevelUp && !isEnemeyLevelUp)
         {
+            EnemyMaxHealth += 400f;
+            EnemyCurrentHealth = EnemyMaxHealth;
+
+            isEnemeyLevelUp = true;
             Level1.SetActive(false);
             Level2.SetActive(true);
 
@@ -122,6 +138,9 @@ public class GameManager : MonoBehaviour
     
     void LevelUp()
     {
+        BaseMaxHealth += 400f;
+        BaseCurrentHealth = BaseMaxHealth;
+
         Level1Base.SetActive(false);
         Level2Base.SetActive(true);
 
@@ -137,4 +156,23 @@ public class GameManager : MonoBehaviour
         enemyBaseHealthBar.fillAmount = Mathf.Lerp(enemyBaseHealthBar.fillAmount, EnemyCurrentHealth / EnemyMaxHealth, lerpspeed);
     }
    
+    public void OpenChest()
+    {
+        if(desertChest!=null)
+            desertChest.SetTrigger("open");
+
+        if(darkChest !=null)
+            darkChest.SetTrigger("open");
+    }
+
+    public void CloseChest()
+    {
+        if (desertChest != null)
+            desertChest.SetTrigger("close");
+
+        if (darkChest != null)
+            darkChest.SetTrigger("close");
+    }
+
+
 }

@@ -8,6 +8,10 @@ TagManager:
   - Base
   - Character
   - EnemyBase
+  - AudioManager
+  - BloodObjectPool
+  - GameManager
+  - UIManager
   layers:
   - Default
   - TransparentFX

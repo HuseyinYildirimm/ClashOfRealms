@@ -347,7 +347,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Store/UnityTechnologies/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll"
 "Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Editor/CoverageFormats/OpenCover/Mono.Reflection/ByteBuffer.cs"
 "Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Editor/CoverageFormats/OpenCover/Mono.Reflection/Disassembler.cs"
 "Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Editor/CoverageFormats/OpenCover/Mono.Reflection/Instruction.cs"

@@ -332,7 +332,6 @@
 -r:"C:/Users/husoy/OneDrive/Masaüstü/16.08.2023/CaglarBoyuSavas/Library/PackageCache/com.unity.burst@1.8.4/Unity.Burst.Unsafe.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Store/UnityTechnologies/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll"
 "Library/PackageCache/com.unity.burst@1.8.4/Runtime/BurstCompileAttribute.cs"
 "Library/PackageCache/com.unity.burst@1.8.4/Runtime/BurstCompiler.cs"
 "Library/PackageCache/com.unity.burst@1.8.4/Runtime/BurstCompilerOptions.cs"

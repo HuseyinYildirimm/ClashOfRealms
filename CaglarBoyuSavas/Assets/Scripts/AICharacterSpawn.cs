@@ -13,8 +13,11 @@ public class AICharacterSpawn : MonoBehaviour
     [Header ("Spawn")]
     public Transform spawnPoint;
     public CharacterScriptableObject[] charactersToSpawn; 
-
     private List<GameObject> AIspawnedCharacters = new List<GameObject>();
+    int i;
+
+    [Header("LEVEL")]
+    private int LevelUpExp;
     private int currentLevel = 0;
     private int baseLevel = 0;
 
@@ -31,6 +34,11 @@ public class AICharacterSpawn : MonoBehaviour
         charactersToSpawn = charactersToSpawn.OrderBy(character => character.Price).ToArray();
 
         AISpawnCharacter();
+
+        if (gameManager.difficultyLevel == 0) LevelUpExp = 6500;
+        if (gameManager.difficultyLevel == 1) LevelUpExp = 5000;
+        if (gameManager.difficultyLevel == 2) LevelUpExp = 4000;
+
     }
 
     public void FixedUpdate()
@@ -38,7 +46,7 @@ public class AICharacterSpawn : MonoBehaviour
         LevelControlByMoney();
 
         //queue-move control
-        for (int i = 0; i < AIspawnedCharacters.Count; i++)
+        for ( i = 0; i < AIspawnedCharacters.Count; i++)
         {
             Character character = AIspawnedCharacters[i].GetComponent<Character>();
 
@@ -74,8 +82,8 @@ public class AICharacterSpawn : MonoBehaviour
 
     void LevelControlByMoney()
     {
-        Debug.Log(currentLevel);
-        if (gameManager.AIexp > 4000)
+        Debug.Log("CurrentLevel"+currentLevel);
+        if (gameManager.AIexp > LevelUpExp)
         {
             AILevelUp = true;
             baseLevel = 1;
@@ -107,7 +115,7 @@ public class AICharacterSpawn : MonoBehaviour
 
         if (spawnTimer <= 0) isTimerStarted = true;
 
-        if (isTimerStarted)
+        if (isTimerStarted && i<10)
         {
             timer += Time.deltaTime;
 

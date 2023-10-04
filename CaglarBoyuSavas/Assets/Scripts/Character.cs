@@ -6,13 +6,14 @@ using DG.Tweening;
 public abstract class Character : MonoBehaviour
 {
     [HideInInspector] public Animator anim;
-    private Camera mainCam;
     private AudioSource audioSource;
     protected Rigidbody rb;
     public CharacterScriptableObject character;
     private GameManager gameManager;
     private AudioManager audioManager;
+    private UIManager uiManager;
     public BloodObjectPool bloodOjbect;
+    private AICharacterSpawn aiLevel;
     private Character targetCharacter;
 
     public float currentHealth;
@@ -24,27 +25,35 @@ public abstract class Character : MonoBehaviour
     public bool isAttacking;
     bool baseControl;
     [HideInInspector] public bool archerAttacking;
+    Transform CoinFirstTarget;
+    Transform CoinSecondlyTarget;
 
     RaycastHit hit;
     CapsuleCollider collider;
 
     public void Start()
     {
-        mainCam = Camera.main;
         anim = GetComponentInChildren<Animator>();
-        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         collider = GetComponent<CapsuleCollider>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bloodOjbect = GameObject.Find("BloodObjectPool").GetComponent<BloodObjectPool>();
-
-        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        aiLevel = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AICharacterSpawn>();
+        bloodOjbect = GameObject.FindGameObjectWithTag("BloodObjectPool").GetComponent<BloodObjectPool>();
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         
+        audioSource = GetComponent<AudioSource>();
+
+        character.AudioSourceVolume = uiManager.SfxSlider.value;
         currentHealth = character.CurrentHealth;
     }
 
     public void FixedUpdate()
     {
+        if (gameManager.BaseCurrentHealth <= 0) return;
+
+        audioSource.volume = character.AudioSourceVolume;
+
         AttackDetect();
 
         if (!canMove || gameObject.CompareTag("Enemy") && StopDetect() )
@@ -182,10 +191,27 @@ public abstract class Character : MonoBehaviour
 
                 GameObject moneyClone = Instantiate(gameManager.moneyObj, moneyObj, Quaternion.identity, gameManager.transform);
 
-                moneyClone.transform.DOMove(GetIconPosition(moneyTarget), 2).SetEase(Ease.OutCubic);
-                moneyClone.transform.DORotate(new Vector3(0f, 720f, 0f), 2, RotateMode.FastBeyond360);
+                if(moneyClone != null)
+                {
+                    if (aiLevel.AILevelUp)
+                    {
+                        CoinFirstTarget = gameManager.darkCoinFirstTarget;
+                        CoinSecondlyTarget = gameManager.darkCoinSecondlyTarget;
+                    }
+                    else
+                    {
+                        CoinFirstTarget = gameManager.desertCoinFirstTarget;
+                        CoinSecondlyTarget = gameManager.desertcoinSecondlyTarget;
+                    }
 
-                Destroy(moneyClone, 1.8f);
+                    gameManager.OpenChest();
+                    moneyClone.transform.DOMove(CoinFirstTarget.position, 1).SetEase(Ease.OutCubic).
+                    OnComplete(() => moneyClone.transform.DOMove(CoinSecondlyTarget.position, 1).SetEase(Ease.OutCubic).
+                    OnComplete(() => gameManager.CloseChest()));
+                    moneyClone.transform.DORotate(new Vector3(0f, 720f, 0f), 2, RotateMode.FastBeyond360);
+
+                    Destroy(moneyClone, 2.01f);
+                }
 
                 #endregion
             }
@@ -224,17 +250,7 @@ public abstract class Character : MonoBehaviour
 
     #endregion
 
-    public Vector3 GetIconPosition(Vector3 target)
-    {
-        Vector3 uiPos = gameManager.iconTransform.position;
-        uiPos.z = (target - mainCam.transform.position).z;
-        Vector3 result = mainCam.ScreenToWorldPoint(uiPos);
-
-        return result;
-    }
-
     protected abstract void UseAbility();
-
 
     public void OnDrawGizmos()
     {
@@ -242,7 +258,6 @@ public abstract class Character : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, character.AttackDistance);
         Gizmos.DrawRay(transform.position, transform.right);
     }
-
 
     IEnumerator UISettings()
     {

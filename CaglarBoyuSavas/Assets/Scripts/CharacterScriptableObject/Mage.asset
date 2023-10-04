@@ -25,6 +25,7 @@ MonoBehaviour:
   Price: 250
   KillReward: 400
   Exp: 500
+  AudioSourceVolume: 0
   AttackSound: {fileID: 8300000, guid: 4a39e49e3bdcf614683f16098b3e1993, type: 3}
   TakeDamageSound: {fileID: 8300000, guid: 2f216803227ab774cae4497ebb942df9, type: 3}
   DyingSound: {fileID: 8300000, guid: 47576a5b4c2e5c846a12e398f07982bf, type: 3}

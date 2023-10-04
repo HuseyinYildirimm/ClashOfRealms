@@ -343,7 +343,6 @@
 -r:"C:/Users/husoy/OneDrive/Masaüstü/16.08.2023/CaglarBoyuSavas/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Store/UnityTechnologies/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll"
 "Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/bool2.gen.cs"
 "Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/bool2x2.gen.cs"
 "Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/bool2x3.gen.cs"

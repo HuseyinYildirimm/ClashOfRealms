@@ -54,7 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="C:\Users\husoy\OneDrive\Masaüstü\16.08.2023\CaglarBoyuSavas\Assets\Store\UnityTechnologies\EffectExamples\Editor\PackageManagerAssembly\PackageManagerAssembly.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AICharacterSpawn.cs" />
@@ -67,6 +66,7 @@
     <Compile Include="Assets\Scripts\CharacterSpawn.cs" />
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
     <Compile Include="Assets\Store\AurynSky\Desert Pack\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\HiearchySettings.cs" />
     <Compile Include="Assets\Scripts\BloodObjectPool.cs" />
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\TrapDoorDemo.cs" />
     <Compile Include="Assets\Scripts\GameType.cs" />
@@ -74,6 +74,7 @@
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Sorceress.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\AnimationEvents.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Crossbow.cs" />
@@ -888,17 +889,17 @@
       <Project>{4A631871-4A84-4CC9-B56B-30A7AFD6B096}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{579150AF-3089-8E4C-54EB-64948960D994}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{306118DB-CD25-47BD-EE21-8C1204A02637}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{1F0CD481-FDD5-97E5-84B5-F50FBEED4A62}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{306118DB-CD25-47BD-EE21-8C1204A02637}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{579150AF-3089-8E4C-54EB-64948960D994}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

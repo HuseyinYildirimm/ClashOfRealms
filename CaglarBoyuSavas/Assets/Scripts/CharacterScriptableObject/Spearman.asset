@@ -21,10 +21,11 @@ MonoBehaviour:
   AttackDistance: 3.2
   AttackTimer: 2
   MaxHealth: 30
-  CurrentHealth: 32
+  CurrentHealth: 30
   Price: 100
   KillReward: 150
   Exp: 400
+  AudioSourceVolume: 0
   AttackSound: {fileID: 8300000, guid: 4a39e49e3bdcf614683f16098b3e1993, type: 3}
   TakeDamageSound: {fileID: 8300000, guid: 5ea23b3ee69f5fd499301fb685368d9f, type: 3}
   DyingSound: {fileID: 8300000, guid: 72f5d172c3cb80a4c844b0b1c678fee3, type: 3}

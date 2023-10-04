@@ -25,6 +25,10 @@ MonoBehaviour:
   Price: 0
   KillReward: 0
   Exp: 0
+  AudioSourceVolume: 1
+  AttackSound: {fileID: 0}
+  TakeDamageSound: {fileID: 0}
+  DyingSound: {fileID: 0}
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

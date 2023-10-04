@@ -356,7 +356,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Store/UnityTechnologies/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.11/Editor/2D/CinemachineUniversalPixelPerfectEditor.cs"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.11/Editor/2D/CompositeShadowCaster2DEditor.cs"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.11/Editor/2D/Converter/BuiltInToURP2DConverterContainer.cs"
