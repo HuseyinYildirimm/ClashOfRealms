@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AICharacterSpawn : MonoBehaviour
 {
@@ -82,7 +80,6 @@ public class AICharacterSpawn : MonoBehaviour
 
     void LevelControlByMoney()
     {
-        Debug.Log("CurrentLevel"+currentLevel);
         if (gameManager.AIexp > LevelUpExp)
         {
             AILevelUp = true;

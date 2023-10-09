@@ -34,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 3737516218280624697}
   - {fileID: 2668362817500136169}
+  - {fileID: 2137346550489893172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,8 +81,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  audioSource: {fileID: 0}
   character: {fileID: 11400000, guid: 9e65b097c9b340c4cb86a87ea58c105f, type: 2}
+  audioManager: {fileID: 0}
   bloodOjbect: {fileID: 0}
+  targetCharacter: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -90,6 +94,7 @@ MonoBehaviour:
   isDead: 0
   isAttacking: 0
   archerAttacking: 0
+  attackPoint: {fileID: 2137346550489893172}
 --- !u!82 &2534361915851076186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -186,6 +191,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &8151245880654700579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137346550489893172}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2137346550489893172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8151245880654700579}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.71, y: 2.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 432867798959692967}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2668362817500010601
 PrefabInstance:
   m_ObjectHideFlags: 0

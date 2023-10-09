@@ -12,9 +12,15 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) isDragging = true;
-       
-        if (Input.GetMouseButtonUp(0)) isDragging = false;
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            isDragging = true;
+        }
+
+        if (Input.GetMouseButtonUp(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended))
+        {
+            isDragging = false;
+        }
 
         if (isDragging)
         {

@@ -46,8 +46,13 @@ public class CharacterScriptableObject : ScriptableObject
     [Header("Sounds")]
     [Range(0,1)] public float AudioSourceVolume;
     public AudioClip AttackSound;
+    public AudioClip AbilitySound;
     public AudioClip TakeDamageSound;
     public AudioClip DyingSound;
+
+    [Header("Effects")]
+    public GameObject AttackVFX;
+
 
 
     [Space(10)]

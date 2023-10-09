@@ -9,5 +9,7 @@ public enum ClassType
     Knight,
     Crossbow,
     Swordsman,
-    Sorceress
+    Sorceress,
+    Base,
+    EnemyBase
 }

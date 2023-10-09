@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Brute : Character
 {
+    public Transform attackVfxPoint;
+
     protected override void UseAbility()
     {
-       //special ability
+        GameObject attackVfxClone = Instantiate(character.AttackVFX, attackVfxPoint.position,attackVfxPoint.rotation,attackVfxPoint);
+        Destroy(attackVfxClone, 4f);
+      
     }
     public void Update()
     {

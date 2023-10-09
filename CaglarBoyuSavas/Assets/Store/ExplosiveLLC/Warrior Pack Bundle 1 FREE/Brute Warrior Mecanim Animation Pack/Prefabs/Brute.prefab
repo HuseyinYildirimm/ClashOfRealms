@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8590653121877572794}
+  - {fileID: 4466263042852635333}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,14 +78,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f4671f1085f854d84b6dba20730f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   character: {fileID: 11400000, guid: 449fbfda11df6f84787a89d05078e739, type: 2}
+  bloodOjbect: {fileID: 0}
+  targetCharacter: {fileID: 0}
+  currentHealth: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 72
   canMove: 0
-  currentHealth: 0
   isDead: 0
   isAttacking: 0
+  archerAttacking: 0
+  attackVfxPoint: {fileID: 4466263042852635333}
+--- !u!1 &6358040281411189659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4466263042852635333}
+  m_Layer: 6
+  m_Name: AttackVFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4466263042852635333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358040281411189659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.127, y: 1.51, z: 3.181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2000329412139980623}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8590653121877435996
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,43 +1,32 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
+    UIManager uiManager;
     public Sound[] sounds;
-
+    List<AudioSource> audioSourceList = new List<AudioSource>(); 
     private static AudioManager _Instance;
-
-    public static AudioManager Instance
-    {
-        get
-        {
-            if (_Instance == null)
-            {
-                _Instance = FindObjectOfType<AudioManager>();
-            }
-            return _Instance;
-        }
-    }
 
     private void Awake()
     {
-        if (_Instance != null && _Instance != this)
+        if (_Instance == null)
         {
-            Destroy(this.gameObject);
-            return;
+            _Instance = this;
         }
         else
         {
-            _Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     public void Start()
     {
+        uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+
         foreach (var sound in sounds)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
@@ -46,9 +35,21 @@ public class AudioManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.playOnAwake = false;
             sound.source.loop = sound.loop;
+
+            sound.volume = uiManager.SfxSlider.value;
+
+            audioSourceList.Add(sound.source);
         }
 
-        Instance.Play("Soundtrack1");
+        _Instance.Play("Soundtrack1");
+    }
+
+    public void AdjustAllVolumes(float volume)
+    {
+        foreach (var audioSource in audioSourceList)
+        {
+            audioSource.volume = volume;
+        }
     }
 
     public void Play(string audioName)

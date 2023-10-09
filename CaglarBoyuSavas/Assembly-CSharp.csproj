@@ -67,6 +67,7 @@
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
     <Compile Include="Assets\Store\AurynSky\Desert Pack\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\HiearchySettings.cs" />
+    <Compile Include="Assets\Scripts\ArcherArrow.cs" />
     <Compile Include="Assets\Scripts\BloodObjectPool.cs" />
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\TrapDoorDemo.cs" />
     <Compile Include="Assets\Scripts\GameType.cs" />
@@ -78,8 +79,10 @@
     <Compile Include="Assets\Scripts\AnimationEvents.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Crossbow.cs" />
+    <Compile Include="Assets\Scripts\CharactersScript\EnemyBase.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Swordsman.cs" />
+    <Compile Include="Assets\Scripts\CharactersScript\Base.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Spearman.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Hammer.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\SpecialAbilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

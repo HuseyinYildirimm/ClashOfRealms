@@ -18,11 +18,11 @@ public class AnimationEvents : MonoBehaviour
 
     public void ArcherArrowActive()
     {
-        if (archer != null) archer.arrow.SetActive(true);
+        if (archer != null) archer.handArrow.SetActive(true);
     }
 
     public void ArcherArrowDeActive()
     {
-        if (archer != null) archer.arrow.SetActive(false);
+        if (archer != null) archer.handArrow.SetActive(false);
     }
 }

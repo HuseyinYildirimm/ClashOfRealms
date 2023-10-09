@@ -6,42 +6,47 @@ using DG.Tweening;
 public abstract class Character : MonoBehaviour
 {
     [HideInInspector] public Animator anim;
-    private AudioSource audioSource;
+    [HideInInspector] public AudioSource audioSource;
     protected Rigidbody rb;
+
     public CharacterScriptableObject character;
     private GameManager gameManager;
-    private AudioManager audioManager;
+    [HideInInspector]
+    public AudioManager audioManager;
     private UIManager uiManager;
     public BloodObjectPool bloodOjbect;
     private AICharacterSpawn aiLevel;
-    private Character targetCharacter;
+    private SpecialAbilities specialAbilities;
+    [HideInInspector] public Character targetCharacter;
 
     public float currentHealth;
     [Space(10)]
 
     public LayerMask layerMask;
-    public bool canMove;
-    public bool isDead = false;
-    public bool isAttacking;
+    [HideInInspector] public bool canMove;
+    [HideInInspector] public bool isDead = false;
+    [HideInInspector] public bool isAttacking;
     bool baseControl;
     [HideInInspector] public bool archerAttacking;
+  
     Transform CoinFirstTarget;
     Transform CoinSecondlyTarget;
 
     RaycastHit hit;
-    CapsuleCollider collider;
+    CapsuleCollider col;
 
     public void Start()
     {
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
-        collider = GetComponent<CapsuleCollider>();
+        col = GetComponent<CapsuleCollider>();
         uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         aiLevel = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AICharacterSpawn>();
         bloodOjbect = GameObject.FindGameObjectWithTag("BloodObjectPool").GetComponent<BloodObjectPool>();
-        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-        
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        specialAbilities = GameObject.FindGameObjectWithTag("AbilitiesManager").GetComponent<SpecialAbilities>();
+
         audioSource = GetComponent<AudioSource>();
 
         character.AudioSourceVolume = uiManager.SfxSlider.value;
@@ -50,16 +55,17 @@ public abstract class Character : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (gameManager.BaseCurrentHealth <= 0) return;
+        if ( gameManager.BaseCurrentHealth <= 0 || gameManager.EnemyCurrentHealth <=0 || gameObject.CompareTag("Base") ||
+            gameObject.CompareTag("EnemyBase")) return;
 
         audioSource.volume = character.AudioSourceVolume;
 
         AttackDetect();
 
-        if (!canMove || gameObject.CompareTag("Enemy") && StopDetect() )
+        if (!canMove || gameObject.CompareTag("Enemy") && StopDetect())
         {
             StopMove();
-            
+
         }
         else Move();
 
@@ -68,17 +74,17 @@ public abstract class Character : MonoBehaviour
         {
             if ((hit.collider.CompareTag("Base") && gameObject.CompareTag("Enemy")) || hit.collider.CompareTag("EnemyBase") && gameObject.CompareTag("Character")) baseControl = true;
         }
-       
+
     }
 
     #region Movement
 
     protected void Move()
     {
-       Vector3 parentRight = transform.parent.TransformDirection(Vector3.right); 
-       Vector3 newPosition = transform.position + parentRight * character.MovementSpeed * Time.deltaTime;
-       
-       rb.MovePosition(newPosition);
+        Vector3 parentRight = transform.parent.TransformDirection(Vector3.right);
+        Vector3 newPosition = transform.position + parentRight * character.MovementSpeed * Time.deltaTime;
+
+        rb.MovePosition(newPosition);
         anim.SetBool("Move", true);
     }
 
@@ -90,7 +96,7 @@ public abstract class Character : MonoBehaviour
 
     public bool StopDetect()
     {
-        if (!Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.right, character.StopDistance, layerMask) && !baseControl )
+        if (!Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.right, character.StopDistance, layerMask) && !baseControl)
         {
             return false;
         }
@@ -106,30 +112,25 @@ public abstract class Character : MonoBehaviour
     {
         if (Physics.CheckSphere(transform.position, character.AttackDistance) && !isAttacking && !isDead)
         {
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, character.AttackDistance);
             foreach (Collider collider in colliders)
             {
                 if (!gameObject.CompareTag("Character") && (collider.gameObject.CompareTag("Character") || collider.gameObject.CompareTag("Base")) ||
                      !gameObject.CompareTag("Enemy") && (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("EnemyBase")))
                 {
-                    targetCharacter = collider.gameObject.GetComponent<Character>();
+
+                    targetCharacter =collider.gameObject.GetComponent<Character>();
+
                     isAttacking = true;
                     archerAttacking = true;
-                    
+
                     anim.Play("Attack1");
                     anim.SetBool("Attack", true);  //for sorceress
+
                     audioSource.PlayOneShot(character.AttackSound);
 
                     StartCoroutine(AttackTimer());
-
-                    if (collider.gameObject.CompareTag("Base"))
-                    {
-                        gameManager.BaseCurrentHealth -= character.Damage;
-                    }
-                    else if (collider.gameObject.CompareTag("EnemyBase"))
-                    {
-                        gameManager.EnemyCurrentHealth -= character.Damage;
-                    }
 
                 }
             }
@@ -142,32 +143,41 @@ public abstract class Character : MonoBehaviour
         anim.SetBool("Attack", false);
         yield return new WaitForSeconds(character.AttackTimer);
         isAttacking = false;
-       
+
     }
 
     public void Damage() //AnimationEvent
     {
-        if (targetCharacter != null)
+        if (targetCharacter != null )
         {
             targetCharacter.TakeDamage(character.Damage);
         }
+        UseAbility();
     }
 
     public void TakeDamage(float damage)
     {
+        if (specialAbilities.armor && gameObject.CompareTag("Character")) return;
+        Debug.Log("xd");
         currentHealth -= damage;
+        
+        if(character.ClassType == ClassType.Base)
+        gameManager.BaseCurrentHealth = currentHealth;
+
+        if (character.ClassType == ClassType.EnemyBase)
+            gameManager.EnemyCurrentHealth = currentHealth;
 
         audioSource.PlayOneShot(character.TakeDamageSound);
 
         bloodOjbect.ActivateBloodEffect(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2, gameObject.transform.position.z), transform.rotation);
-        
+
         if (currentHealth <= 0 && !isDead)
         {
             isDead = true;
             audioSource.PlayOneShot(character.DyingSound);
 
             anim.Play("Death");
-            collider.enabled = false;
+            col.enabled = false;
             rb.isKinematic = false;
             rb.useGravity = true;
 
@@ -181,7 +191,7 @@ public abstract class Character : MonoBehaviour
                 gameManager.exp += character.Exp;
 
                 gameManager.money += character.KillReward;
-                gameManager.moneyRise.text = "+"+character.KillReward.ToString("F0");
+                gameManager.moneyRise.text = "+" + character.KillReward.ToString("F0");
                 StartCoroutine(UISettings());
 
                 #region MoneyValueText
@@ -191,7 +201,7 @@ public abstract class Character : MonoBehaviour
 
                 GameObject moneyClone = Instantiate(gameManager.moneyObj, moneyObj, Quaternion.identity, gameManager.transform);
 
-                if(moneyClone != null)
+                if (moneyClone != null)
                 {
                     if (aiLevel.AILevelUp)
                     {
@@ -219,11 +229,11 @@ public abstract class Character : MonoBehaviour
             {
                 #region DifficultyLevel
 
-                gameManager.AIexp += character.Exp* 1.3f;
+                gameManager.AIexp += character.Exp * 1.3f;
 
                 if (gameManager.difficultyLevel == 0) gameManager.AImoney += character.KillReward * 1.3f;
 
-                else if(gameManager.difficultyLevel == 1) gameManager.AImoney += character.KillReward * 1.8f;
+                else if (gameManager.difficultyLevel == 1) gameManager.AImoney += character.KillReward * 1.8f;
 
                 else gameManager.AImoney += character.KillReward * 2.3f;
 
@@ -236,7 +246,7 @@ public abstract class Character : MonoBehaviour
         Vector3 damageVal = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
         TextMeshProUGUI damageValueClone = Instantiate(gameManager.DamageValue, damageVal, Quaternion.identity, gameManager.DamageValue.transform.parent);
 
-        gameManager.DamageValue.text =character.Damage.ToString("F0");
+        gameManager.DamageValue.text = character.Damage.ToString("F0");
 
         Vector3 originalPosition = damageValueClone.rectTransform.anchoredPosition3D;
         Vector3 targetPosition = originalPosition + Vector3.up * 30f;

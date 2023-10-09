@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Warrior : Character
 {
+    bool attackSound;
+
+
     protected override void UseAbility()
     {
-        //special ability
+        if (audioManager != null )
+        {
+            audioManager.Play("Sword");
+        }
     }
+
     public void Update()
     {
-
+        
     }
 }

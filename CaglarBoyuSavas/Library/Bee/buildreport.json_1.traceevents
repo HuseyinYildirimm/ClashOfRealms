@@ -1,0 +1,574 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1696859831137565, "dur": 1114631, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859831138024, "dur": 7162, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859831145188, "dur": 31175, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859831176442, "dur": 575883, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859831752328, "dur": 487899, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859832240229, "dur": 11965, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859832252671, "dur": 84, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1696859831589473, "dur": 145960, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831590266, "dur": 44990, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831721495, "dur": 3966, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831725464, "dur": 9946, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831726013, "dur": 8865, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831739371, "dur": 1022, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1696859831738719, "dur": 1689, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859832253705, "dur": 376, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1696859831784006, "dur":1130, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859831785141, "dur":51, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1696859831785200, "dur":18, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1696859831785218, "dur":476, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1696859831785747, "dur":458, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859831786205, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221465, "dur":353, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221818, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221829, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221833, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221840, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221842, "dur":17, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221859, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221861, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221866, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221868, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221871, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221873, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221877, "dur":10, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221887, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221890, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221891, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221895, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221897, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221901, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221902, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221906, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221908, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221913, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221915, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221919, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221920, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221932, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221934, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221937, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221938, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221942, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221944, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221948, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221983, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832221998, "dur":1633, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1696859831785795, "dur":419, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831786216, "dur":3728, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831789953, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1696859831789960, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831791153, "dur":588, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1696859831791746, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1696859831791786, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831792310, "dur":1886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1696859831794198, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1696859831794299, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831794618, "dur":1202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1696859831795847, "dur":57679, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831853529, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831853685, "dur":894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831854614, "dur":17222, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831871841, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831871851, "dur":1098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831872976, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831873080, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831873085, "dur":900, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831874021, "dur":279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831874304, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831874311, "dur":1306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831875645, "dur":15632, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831891280, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831891286, "dur":7437, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831898752, "dur":18402, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831917157, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859831917166, "dur":1077, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859831918268, "dur":104744, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859832023021, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859832023034, "dur":6101, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696859832029173, "dur":8124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1696859832037347, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859832037354, "dur":5474, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1696859832042858, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1696859832042891, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696859832042899, "dur":4353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1696859832047298, "dur":174220, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831785986, "dur":273, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831786259, "dur":3687, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831789955, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1696859831790133, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831796413, "dur":932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1696859831797375, "dur":93558, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1696859831890937, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831890943, "dur":4525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1696859831895504, "dur":19824, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696859831915395, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859831915405, "dur":4243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696859831919684, "dur":126003, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696859832045692, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696859832045712, "dur":2083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696859832047817, "dur":173720, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831785819, "dur":401, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831786220, "dur":3771, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831789991, "dur":10442, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1696859831800437, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831800455, "dur":917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1696859831801397, "dur":36409, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831837811, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831837823, "dur":1261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831839114, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831839230, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831839236, "dur":2592, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831841862, "dur":1001, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831842866, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831842872, "dur":2864, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831845763, "dur":44733, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831890502, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831890514, "dur":7828, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831898370, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831898508, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831898514, "dur":4103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831902644, "dur":1013, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831903662, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831903672, "dur":2069, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831905768, "dur":363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831906134, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831906142, "dur":1381, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831907551, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831907657, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831907665, "dur":2461, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831910150, "dur":1421, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831911575, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859831911583, "dur":4299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859831915913, "dur":177717, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859832093636, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696859832093649, "dur":1074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696859832094746, "dur":126724, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831785853, "dur":375, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831786228, "dur":3761, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831789989, "dur":11168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1696859831801160, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831801174, "dur":1680, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1696859831802898, "dur":100405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859831903309, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831903341, "dur":6030, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859831909742, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859831909958, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859831909964, "dur":3881, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859831913870, "dur":260359, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859832174234, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696859832174246, "dur":2486, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696859832176752, "dur":44732, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831785890, "dur":345, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831786235, "dur":3754, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831789994, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1696859831790123, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831792479, "dur":1766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1696859831794273, "dur":169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1696859831794452, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831794459, "dur":1124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1696859831795607, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":5, "ts":1696859831795671, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831795676, "dur":1424, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":5, "ts":1696859831797128, "dur":127944, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859831925098, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831925187, "dur":7163, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859831932374, "dur":2251, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859831934629, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859831934638, "dur":2500, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859831937171, "dur":195249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859832132423, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696859832132431, "dur":4777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696859832137227, "dur":84241, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831785916, "dur":324, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831786240, "dur":3761, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831790001, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1696859831790142, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831796786, "dur":959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1696859831797774, "dur":61565, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas.exe" }}
+,{ "pid":12345, "tid":6, "ts":1696859831859344, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831859351, "dur":3610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas.exe" }}
+,{ "pid":12345, "tid":6, "ts":1696859831862988, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831863194, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831863202, "dur":1044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831864269, "dur":21398, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831885689, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831885697, "dur":1884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831887604, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831887706, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831887712, "dur":1739, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831889476, "dur":1543, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831891022, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831891028, "dur":4070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831895131, "dur":18153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831913287, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831913293, "dur":3868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831917188, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831917275, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859831917280, "dur":1053, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859831918359, "dur":82537, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859832000900, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859832000982, "dur":2011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859832003017, "dur":179427, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859832182447, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696859832182454, "dur":897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696859832183374, "dur":38024, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831785948, "dur":299, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831786247, "dur":3698, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831789953, "dur":36115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1696859831826071, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831828981, "dur":849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1696859831829859, "dur":65517, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831895379, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831895388, "dur":4494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831899906, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831900059, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831900068, "dur":1125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831901219, "dur":298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831901520, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831901525, "dur":3015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831904566, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831904725, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831904731, "dur":1607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831906365, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831906478, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831906484, "dur":1763, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831908270, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831908348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831908354, "dur":2141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831910521, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831910596, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831910601, "dur":3251, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831913879, "dur":58623, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831972508, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831972517, "dur":1033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831973584, "dur":1071, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831974659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831974666, "dur":1005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831975698, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831975860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859831975886, "dur":1172, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859831977100, "dur":153847, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859832130951, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696859832130960, "dur":1064, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696859832132055, "dur":89399, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831785975, "dur":277, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831786252, "dur":3795, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831790048, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1696859831790205, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831797300, "dur":1252, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1696859831798579, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831798723, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831798912, "dur":1720, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831800657, "dur":38532, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831839192, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831839200, "dur":2458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831841688, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831841819, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831841825, "dur":1599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831843462, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831843620, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831843642, "dur":1835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831845501, "dur":17702, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831863207, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831863215, "dur":874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831864113, "dur":160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831864275, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831864280, "dur":650, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831864950, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831865155, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831865163, "dur":1040, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831866229, "dur":30449, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831896681, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859831896688, "dur":2793, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859831899510, "dur":139609, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859832039127, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859832039135, "dur":3803, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696859832042966, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1696859832042995, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696859832043054, "dur":4687, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1696859832047766, "dur":173741, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831786012, "dur":254, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831786266, "dur":3729, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831789997, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1696859831790192, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831797032, "dur":1097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1696859831798156, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1696859831798231, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831798577, "dur":5346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1696859831803954, "dur":20169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831824147, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831824156, "dur":2674, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831826859, "dur":17944, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831844807, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831844815, "dur":1634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831846476, "dur":26236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831872715, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831872723, "dur":3918, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831876666, "dur":19557, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831896226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831896233, "dur":2546, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831898815, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831898994, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831899017, "dur":1953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831900994, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831901091, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831901098, "dur":3390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831904516, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831904672, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831904680, "dur":2132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831906861, "dur":696, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831907561, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859831907590, "dur":5766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859831913383, "dur":98189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859832011577, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832011586, "dur":812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696859832012420, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":9, "ts":1696859832012450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832012489, "dur":787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":9, "ts":1696859832013303, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":9, "ts":1696859832013364, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832013370, "dur":14912, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":9, "ts":1696859832028309, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":9, "ts":1696859832028395, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832028405, "dur":1148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":9, "ts":1696859832029582, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1696859832029615, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832029623, "dur":7364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1696859832037020, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1696859832037078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696859832037092, "dur":6668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1696859832043782, "dur":177615, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831786048, "dur":224, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831786272, "dur":3776, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831790048, "dur":11835, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1696859831801921, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831801935, "dur":983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1696859831802949, "dur":19535, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831822488, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831822495, "dur":1444, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831823973, "dur":17155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831841132, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831841138, "dur":2028, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831843575, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831843755, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831843762, "dur":2391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831846177, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831846278, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831846300, "dur":3624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831849948, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831850052, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831850061, "dur":2489, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831852587, "dur":165, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831852756, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831852766, "dur":1690, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831854553, "dur":18574, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831873131, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831873138, "dur":1118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831874296, "dur":20526, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831894850, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831894863, "dur":3645, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831898549, "dur":30635, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831929190, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859831929202, "dur":967, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859831930666, "dur":177962, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859832108635, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696859832108656, "dur":3575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696859832112279, "dur":109150, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831786068, "dur":210, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831786278, "dur":3677, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831789977, "dur":10993, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1696859831800973, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831800987, "dur":1455, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1696859831802473, "dur":31920, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831834400, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831834411, "dur":951, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831835390, "dur":19525, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831854937, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831854944, "dur":742, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831855793, "dur":19449, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831875258, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831875266, "dur":1255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831876545, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831876635, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831876641, "dur":806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831877478, "dur":117052, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831994536, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831994554, "dur":906, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831995484, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831995618, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859831995627, "dur":756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859831996408, "dur":4562, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832000974, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832000982, "dur":3137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832004151, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/DOTween.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832004354, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832004362, "dur":753, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/DOTween.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832005146, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Boxophobic.Utils.Scripts.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832005322, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832005331, "dur":812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Boxophobic.Utils.Scripts.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832006172, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832006368, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832006375, "dur":878, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832007275, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Assembly-CSharp-firstpass.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832007379, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832007385, "dur":943, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Assembly-CSharp-firstpass.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832008354, "dur":22095, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832030453, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832037775, "dur":5084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696859832042891, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":11, "ts":1696859832042920, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696859832042926, "dur":3955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":11, "ts":1696859832046934, "dur":174598, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831786098, "dur":187, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831786285, "dur":3665, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831789957, "dur":458, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1696859831790417, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831797899, "dur":1019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1696859831798950, "dur":23270, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831822224, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831822232, "dur":3314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831825572, "dur":15579, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831841154, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831841161, "dur":2464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831843687, "dur":2650, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831846340, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831846346, "dur":4318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831850687, "dur":16913, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831867603, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831867610, "dur":650, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831868281, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831868366, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831868372, "dur":982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831869407, "dur":17588, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831887013, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831887020, "dur":834, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831887878, "dur":18844, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831906726, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831906742, "dur":2727, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831909492, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831909571, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831909577, "dur":2487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831912111, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Animation.Rigging.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831912253, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859831912259, "dur":4765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Animation.Rigging.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859831917054, "dur":201581, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859832118641, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696859832118652, "dur":3131, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696859832121805, "dur":99633, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1696859831786135, "dur":156, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1696859831786291, "dur":3670, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1696859831789964, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":13, "ts":1696859831790123, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1696859831796202, "dur":1079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":13, "ts":1696859831797312, "dur":404539, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":13, "ts":1696859832201855, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1696859832201862, "dur":19461, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":13, "ts":1696859832221346, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":13, "ts":1696859832221348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831786163, "dur":133, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831786296, "dur":3651, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831789953, "dur":10941, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1696859831800897, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831800911, "dur":1456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1696859831802396, "dur":18809, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831821213, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831821227, "dur":2950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831824216, "dur":16139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831840359, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831840367, "dur":2283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831842692, "dur":266, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831842962, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831842967, "dur":2091, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831845085, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831845216, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831845221, "dur":3923, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831849175, "dur":17603, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831866781, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831866809, "dur":656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831867487, "dur":16921, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831884415, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831884426, "dur":1649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831886116, "dur":31107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831917226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831917232, "dur":1104, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831918359, "dur":45762, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831964128, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859831964139, "dur":1001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859831965170, "dur":48353, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859832013527, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859832013535, "dur":1327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1696859832014901, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1696859832014935, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1696859832014966, "dur":165816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1696859832180803, "dur":40604, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831786192, "dur":110, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831786302, "dur":3712, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831790014, "dur":11653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":15, "ts":1696859831801671, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831801689, "dur":937, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":15, "ts":1696859831802653, "dur":20209, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831822865, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831822871, "dur":3723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831826624, "dur":58558, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831885186, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831885204, "dur":4531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831889776, "dur":16991, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831906772, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831906780, "dur":2410, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831909214, "dur":299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831909516, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831909522, "dur":1885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831911438, "dur":416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831911858, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859831911865, "dur":3806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859831915709, "dur":100499, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859832016212, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859832016219, "dur":2511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":15, "ts":1696859832018753, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":15, "ts":1696859832018782, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859832018788, "dur":13801, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":15, "ts":1696859832032706, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/level0.resS" }}
+,{ "pid":12345, "tid":15, "ts":1696859832032835, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859832032857, "dur":10202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/level0.resS" }}
+,{ "pid":12345, "tid":15, "ts":1696859832043092, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/boot.config" }}
+,{ "pid":12345, "tid":15, "ts":1696859832043190, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1696859832043194, "dur":5969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/boot.config" }}
+,{ "pid":12345, "tid":15, "ts":1696859832049376, "dur":172087, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831786232, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831786232, "dur":3756, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831789990, "dur":258, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1696859831790250, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831797964, "dur":1076, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1696859831799073, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831799176, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831799721, "dur":1168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831800928, "dur":40130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831841062, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831841068, "dur":1823, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831842916, "dur":29295, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831872214, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831872221, "dur":5232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831877483, "dur":19706, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831897192, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831897199, "dur":2883, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831900129, "dur":20959, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831921092, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859831921102, "dur":741, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859831921867, "dur":102171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859832024044, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859832024056, "dur":6109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":16, "ts":1696859832030199, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/resources.assets" }}
+,{ "pid":12345, "tid":16, "ts":1696859832030234, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1696859832030241, "dur":12516, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/husoy/OneDrive/Masast/AgeOfWar/CaglarBoyuSavas_Data/resources.assets" }}
+,{ "pid":12345, "tid":16, "ts":1696859832043292, "dur":178102, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696859832225679, "dur":1357, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1696859832254133, "dur": 545, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1696859832252658, "dur": 2035, "ph": "X", "name": "Write chrome-trace events", "args": {} },

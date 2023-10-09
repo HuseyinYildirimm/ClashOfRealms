@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,6 +5,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     AICharacterSpawn aiLevel;
+    public CharacterScriptableObject baseHealth;
+    public CharacterScriptableObject enemyBaseHealth;
+
+    [HideInInspector] public bool gameOver;
 
     [Header("LevelSettings")]
     public int difficultyLevel;
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     public float BaseMaxHealth = 1000;
     public float BaseCurrentHealth;
     public Image basehealthBar;
+    public Image characterHealth;
 
     [Space(10)]
 
@@ -64,11 +67,6 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
 
-    [Header("PARTICLE")]
-    public GameObject bloodEffect;
-
-    [Space(10)]
-
     [Header("CHEST")]
     public Animator desertChest;
     public Transform desertCoinFirstTarget;
@@ -86,14 +84,18 @@ public class GameManager : MonoBehaviour
         Level1Base.SetActive(true);
         Level2Base.SetActive(false);
 
-        EnemyCurrentHealth = EnemyMaxHealth;
-        BaseCurrentHealth = BaseMaxHealth;
+        HealthByLevel();
+
     }
 
     public void Update()
     {
-
         Health();
+        if (BaseCurrentHealth <= 0)
+        {
+            BaseCurrentHealth = 0f;
+            gameOver = true;
+        }
 
         #region Money
 
@@ -109,6 +111,8 @@ public class GameManager : MonoBehaviour
 
         #endregion
 
+        #region LevelUp
+
         if (isLevelUp)
         {
             if (exp >= 6000f)
@@ -120,8 +124,10 @@ public class GameManager : MonoBehaviour
         }
         if (aiLevel.AILevelUp && !isEnemeyLevelUp)
         {
-            EnemyMaxHealth += 400f;
+            EnemyMaxHealth += 500f;
             EnemyCurrentHealth = EnemyMaxHealth;
+            enemyBaseHealth.MaxHealth = EnemyMaxHealth;
+            enemyBaseHealth.CurrentHealth = EnemyCurrentHealth;
 
             isEnemeyLevelUp = true;
             Level1.SetActive(false);
@@ -129,6 +135,7 @@ public class GameManager : MonoBehaviour
 
             RenderSettings.skybox = Level2Skybox;
         }
+        #endregion
     }
 
     public void BaseLevelClick()
@@ -138,8 +145,10 @@ public class GameManager : MonoBehaviour
     
     void LevelUp()
     {
-        BaseMaxHealth += 400f;
-        BaseCurrentHealth = BaseMaxHealth;
+        baseHealth.MaxHealth += 400f;
+        baseHealth.CurrentHealth = baseHealth.MaxHealth;
+        BaseMaxHealth = baseHealth.MaxHealth;
+        BaseCurrentHealth = baseHealth.CurrentHealth;
 
         Level1Base.SetActive(false);
         Level2Base.SetActive(true);
@@ -151,9 +160,28 @@ public class GameManager : MonoBehaviour
 
     public void Health()
     {
-        basehealthBar.fillAmount = Mathf.Lerp(basehealthBar.fillAmount, BaseCurrentHealth / BaseMaxHealth, lerpspeed);
+        basehealthBar.fillAmount = Mathf.Lerp(basehealthBar.fillAmount, BaseCurrentHealth/ BaseMaxHealth, lerpspeed);
 
         enemyBaseHealthBar.fillAmount = Mathf.Lerp(enemyBaseHealthBar.fillAmount, EnemyCurrentHealth / EnemyMaxHealth, lerpspeed);
+    }
+
+    public void HealthByLevel()
+    {
+        if(difficultyLevel == 0) enemyBaseHealth.MaxHealth = 300f;
+      
+        else if(difficultyLevel == 1) enemyBaseHealth.MaxHealth = 400f;
+
+        else enemyBaseHealth.MaxHealth = 500f;
+
+        baseHealth.MaxHealth = 300f;
+
+        enemyBaseHealth.CurrentHealth = enemyBaseHealth.MaxHealth;
+        EnemyMaxHealth = enemyBaseHealth.MaxHealth;
+        EnemyCurrentHealth = enemyBaseHealth.CurrentHealth;
+
+        baseHealth.CurrentHealth = baseHealth.MaxHealth;
+        BaseMaxHealth = baseHealth.MaxHealth;
+        BaseCurrentHealth = baseHealth.CurrentHealth;
     }
    
     public void OpenChest()
@@ -174,5 +202,5 @@ public class GameManager : MonoBehaviour
             darkChest.SetTrigger("close");
     }
 
-
+   
 }

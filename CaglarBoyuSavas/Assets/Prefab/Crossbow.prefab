@@ -196,6 +196,37 @@ Transform:
   m_Father: {fileID: 93943260741075852}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 89.776, y: -87.275, z: 92.813}
+--- !u!1 &2829839727720398635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8228639883624827925}
+  m_Layer: 6
+  m_Name: ArrowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8228639883624827925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2829839727720398635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.07, y: 1.952, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4245731386244634296}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4245731386244270744
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +261,7 @@ Transform:
   m_Children:
   - {fileID: 93943260741075888}
   - {fileID: 3127918990348163344}
+  - {fileID: 8228639883624827925}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -276,8 +308,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  audioSource: {fileID: 0}
   character: {fileID: 11400000, guid: 580def0431b6b034fa401cfbdd2e5c0c, type: 2}
+  audioManager: {fileID: 0}
   bloodOjbect: {fileID: 0}
+  targetCharacter: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -286,6 +321,8 @@ MonoBehaviour:
   isDead: 0
   isAttacking: 0
   archerAttacking: 0
+  arrowPref: {fileID: 1368242183358718450, guid: 34cdba1db7a2e6c448b9fece0dedf424, type: 3}
+  arrowPoint: {fileID: 8228639883624827925}
 --- !u!82 &6973301237192693883
 AudioSource:
   m_ObjectHideFlags: 0

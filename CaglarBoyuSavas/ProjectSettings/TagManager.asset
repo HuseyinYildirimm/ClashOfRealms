@@ -12,6 +12,9 @@ TagManager:
   - BloodObjectPool
   - GameManager
   - UIManager
+  - SpecialArrow
+  - Ground
+  - AbilitiesManager
   layers:
   - Default
   - TransparentFX
