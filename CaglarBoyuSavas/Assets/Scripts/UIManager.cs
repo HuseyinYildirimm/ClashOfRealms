@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private AICharacterSpawn characters;
     Camera cam;
-    
-    
+
+    [Space(10)]
+
+    [Header("SOUND")]
+    [SerializeField] private AudioClip soundtrack;
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip gameOverSound;
+
     private Transform characterTransform;
     private Character character;
 
@@ -35,16 +42,26 @@ public class UIManager : MonoBehaviour
     [Space(10)]
 
     [Header("GAMEOVERSCENE")]
-    [SerializeField] private GameObject GUIGameOver;
+    [SerializeField] private GameObject GUI;
     [SerializeField] private GameObject GameOverScene;
     [SerializeField] private TextMeshProUGUI gameOverMat;
-    public float startDilate = -0.5f; 
-    public float targetDilate = 0f;   
+    public float startDilate = -0.5f;
+    public float targetDilate = 0f;
     public float lerpDuration = 1f;
-    float t;
-    private bool isLerping = false;
+    private float t;
     private float currentDilate;
     private float lerpStartTime;
+    private bool isLerpingGameOver = false;
+    private bool gameOverUI;
+
+    [Space(10)]
+
+
+    [Header("WINSCENE")]
+    [SerializeField] private GameObject winScene;
+    [SerializeField] private TextMeshProUGUI winMat;
+    private bool winUI;
+    private bool isLerpingWin = false;
 
     [Space(10)]
 
@@ -58,9 +75,8 @@ public class UIManager : MonoBehaviour
     public Slider MusicSlider;
     public Slider SfxSlider;
 
-
     Vector3 healthBar;
-
+  
     public void Start()
     {
         cam = Camera.main;
@@ -71,9 +87,11 @@ public class UIManager : MonoBehaviour
         OptionsScene.SetActive(false);
         GameOptionsButton.SetActive(false);
         GameOverScene.SetActive(false);
+        winScene.SetActive(false);
 
         currentDilate = startDilate;
         gameOverMat.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, currentDilate);
+        winMat.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, currentDilate);
         lerpStartTime = Time.time;
 
         characterTransform = null;
@@ -82,14 +100,23 @@ public class UIManager : MonoBehaviour
 
     public void Update()
     {
-        if (gameManager.gameOver && !isLerping)
+        if (gameManager.gameOver && !isLerpingGameOver)
         {
-            StartLerp();
+            StartLerpGameOver();
         }
 
-        if (isLerping)
+        if (isLerpingGameOver)
         {
             GameOver();
+        }
+        if (gameManager.Win && !isLerpingWin)
+        {
+            StartLerpWin();
+        }
+
+        if (isLerpingWin)
+        {
+            Win();
         }
 
         if (Input.GetMouseButtonDown(0) || Input.touchCount > 0) //CharacterHealthBar
@@ -119,10 +146,10 @@ public class UIManager : MonoBehaviour
                     SetCharacter(characterHealth, hit.collider.gameObject.transform);
                     gameManager.characterHealth.transform.position = healthBar;
                     gameManager.characterHealth.gameObject.SetActive(true);
-                   
+
                 }
             }
-        } 
+        }
     }
 
     private void FixedUpdate()
@@ -154,12 +181,22 @@ public class UIManager : MonoBehaviour
 
         if (character.currentHealth <= 0) gameManager.characterHealth.gameObject.SetActive(false);
 
-        gameManager.characterHealth.transform.rotation = Quaternion.LookRotation(-cam.transform.position);
+        gameManager.characterHealth.rectTransform.localRotation = Quaternion.LookRotation(cam.transform.position);
 
     }
     #endregion
 
     #region BUTTON
+
+    public void GameSpeedDouble()
+    {
+        Time.timeScale = 2f;
+    }
+
+    public void GameSpeedNormal()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void StartButton()
     {
@@ -167,13 +204,17 @@ public class UIManager : MonoBehaviour
         StartScene.SetActive(false);
         GameOptionsButton.SetActive(true);
         startGame = true;
+        
+        gameManager.GetComponent<AudioSource>().clip = soundtrack;
+        gameManager.GetComponent<AudioSource>().Play();
+
     }
 
     public void DifficultyButton()
     {
         StartScene.SetActive(false);
         DifficultyScene.SetActive(true);
-     
+
     }
 
     public void OptionsButton()
@@ -183,7 +224,7 @@ public class UIManager : MonoBehaviour
         StartScene.SetActive(false);
         DifficultyScene.SetActive(false);
         OptionsScene.SetActive(true);
-        
+
     }
 
     public void MeinMenu()
@@ -257,14 +298,14 @@ public class UIManager : MonoBehaviour
         }
 
         //Medium
-        if (dropDown.value == 1) 
+        if (dropDown.value == 1)
         {
             QualitySettings.SetQualityLevel(1);
             volume.weight = 0.7f;
         }
 
         //High
-        if (dropDown.value == 2) 
+        if (dropDown.value == 2)
         {
             QualitySettings.SetQualityLevel(2);
             volume.weight = 1f;
@@ -278,14 +319,7 @@ public class UIManager : MonoBehaviour
 
     public void MusicVolume()
     {
-        if (audioManager != null)
-        {
-            audioManager.AdjustAllVolumes(MusicSlider.value);
-        }
-        foreach (var c in characters.charactersToSpawn)
-        {
-            c.AudioSourceVolume = MusicSlider.value;
-        }
+        gameManager.GetComponent<AudioSource>().volume = MusicSlider.value;
     }
 
     public void SfxVolume()
@@ -294,28 +328,74 @@ public class UIManager : MonoBehaviour
         {
             c.AudioSourceVolume = SfxSlider.value;
         }
+        if (audioManager != null)
+        {
+            audioManager.AdjustAllVolumes(SfxSlider.value);
+        }
     }
-
+  
     #endregion
 
     #region GAMEOVER
 
-    public void StartLerp()
+    public void StartLerpGameOver()
     {
-        GUIGameOver.SetActive(false);
-        isLerping = true;
+        GUI.SetActive(false);
+        isLerpingGameOver = true;
         lerpStartTime = Time.time;
         currentDilate = startDilate;
         GameOverScene.SetActive(true);
+
+        gameManager.GetComponent<AudioSource>().Stop();
+        gameManager.GetComponent<AudioSource>().PlayOneShot(gameOverSound);
+
+        Time.timeScale = 1;
     }
 
     public void GameOver()
-    {
+    {    
         float timeSinceStart = Time.time - lerpStartTime;
         t = timeSinceStart / lerpDuration;
         currentDilate = Mathf.Lerp(startDilate, targetDilate, t);
         gameOverMat.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, currentDilate);
 
+        if (!gameOverUI)
+        {
+            gameOverUI = true;
+            gameOverMat.rectTransform.DOScale(1.5f, 1f).OnComplete(() => gameOverMat.rectTransform.DOScale(1, 1f)).SetEase(Ease.OutBack).SetLoops(100);
+        }
+
+    }
+    #endregion
+
+    #region WIN
+
+    public void StartLerpWin()
+    {
+        GUI.SetActive(false);
+        isLerpingWin = true;
+        lerpStartTime = Time.time;
+        currentDilate = startDilate;
+        winScene.SetActive(true);
+
+        gameManager.GetComponent<AudioSource>().Stop();
+        gameManager.GetComponent<AudioSource>().PlayOneShot(winSound);
+
+        Time.timeScale = 1;
+    }
+
+    public void Win()
+    {
+        float timeSinceStart = Time.time - lerpStartTime;
+        t = timeSinceStart / lerpDuration;
+        currentDilate = Mathf.Lerp(startDilate, targetDilate, t);
+        winMat.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, currentDilate);
+
+        if (!winUI)
+        {
+            winUI = true;
+            winMat.rectTransform.DOScale(1.5f, 1f).OnComplete(() => winMat.rectTransform.DOScale(1, 1f)).SetEase(Ease.OutBack).SetLoops(100);
+        }
     }
 
     #endregion

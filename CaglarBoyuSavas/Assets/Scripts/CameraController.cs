@@ -7,12 +7,12 @@ public class CameraController : MonoBehaviour
     public float cameraSpeed = 5.0f; // Kamera hýzý
     public float maxLeftPosition ;
     public float maxRightPosition ;
-    bool isDragging = false;
+    [HideInInspector] public bool isDragging = false;
 
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
+        if ((Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)))
         {
             isDragging = true;
         }

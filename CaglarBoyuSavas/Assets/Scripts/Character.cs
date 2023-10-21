@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public abstract class Character : MonoBehaviour
 {
@@ -21,14 +22,15 @@ public abstract class Character : MonoBehaviour
 
     public float currentHealth;
     [Space(10)]
-
+    private Dictionary<Transform, Material> materialPool = new Dictionary<Transform, Material>();
+    Material originalMaterial;
     public LayerMask layerMask;
     [HideInInspector] public bool canMove;
     [HideInInspector] public bool isDead = false;
     [HideInInspector] public bool isAttacking;
-    bool baseControl;
     [HideInInspector] public bool archerAttacking;
-  
+    bool baseControl;
+
     Transform CoinFirstTarget;
     Transform CoinSecondlyTarget;
 
@@ -55,7 +57,7 @@ public abstract class Character : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if ( gameManager.BaseCurrentHealth <= 0 || gameManager.EnemyCurrentHealth <=0 || gameObject.CompareTag("Base") ||
+        if (gameManager.BaseCurrentHealth <= 0 || gameManager.EnemyCurrentHealth <= 0 || gameObject.CompareTag("Base") ||
             gameObject.CompareTag("EnemyBase")) return;
 
         audioSource.volume = character.AudioSourceVolume;
@@ -120,7 +122,7 @@ public abstract class Character : MonoBehaviour
                      !gameObject.CompareTag("Enemy") && (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("EnemyBase")))
                 {
 
-                    targetCharacter =collider.gameObject.GetComponent<Character>();
+                    targetCharacter = collider.gameObject.GetComponent<Character>();
 
                     isAttacking = true;
                     archerAttacking = true;
@@ -146,9 +148,11 @@ public abstract class Character : MonoBehaviour
 
     }
 
+    protected abstract void UseAbility();
+
     public void Damage() //AnimationEvent
     {
-        if (targetCharacter != null )
+        if (targetCharacter != null)
         {
             targetCharacter.TakeDamage(character.Damage);
         }
@@ -158,14 +162,14 @@ public abstract class Character : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (specialAbilities.armor && gameObject.CompareTag("Character")) return;
-        Debug.Log("xd");
-        currentHealth -= damage;
-        
-        if(character.ClassType == ClassType.Base)
-        gameManager.BaseCurrentHealth = currentHealth;
+        if (specialAbilities.aiArmor && gameObject.CompareTag("Enemy")) return;
 
-        if (character.ClassType == ClassType.EnemyBase)
-            gameManager.EnemyCurrentHealth = currentHealth;
+        currentHealth -= damage;
+        MaterialEmissionActive();
+
+        if (character.ClassType == ClassType.Base) gameManager.BaseCurrentHealth = currentHealth;
+
+        if (character.ClassType == ClassType.EnemyBase) gameManager.EnemyCurrentHealth = currentHealth;
 
         audioSource.PlayOneShot(character.TakeDamageSound);
 
@@ -173,21 +177,13 @@ public abstract class Character : MonoBehaviour
 
         if (currentHealth <= 0 && !isDead)
         {
-            isDead = true;
-            audioSource.PlayOneShot(character.DyingSound);
+            if (!gameObject.CompareTag("Character") && !gameObject.CompareTag("Enemy")) return;
 
-            anim.Play("Death");
-            col.enabled = false;
-            rb.isKinematic = false;
-            rb.useGravity = true;
-
-            Destroy(gameObject, 4f);
-
-            if (gameObject.CompareTag("Enemy")) audioManager.Play("CoinSound");
-
+            StartCoroutine(DeathController());
 
             if (gameObject.CompareTag("Enemy"))
             {
+                audioManager.Play("CoinSound");
                 gameManager.exp += character.Exp;
 
                 gameManager.money += character.KillReward;
@@ -246,7 +242,7 @@ public abstract class Character : MonoBehaviour
         Vector3 damageVal = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
         TextMeshProUGUI damageValueClone = Instantiate(gameManager.DamageValue, damageVal, Quaternion.identity, gameManager.DamageValue.transform.parent);
 
-        gameManager.DamageValue.text = character.Damage.ToString("F0");
+        gameManager.DamageValue.text = damage.ToString("F0");
 
         Vector3 originalPosition = damageValueClone.rectTransform.anchoredPosition3D;
         Vector3 targetPosition = originalPosition + Vector3.up * 30f;
@@ -260,13 +256,46 @@ public abstract class Character : MonoBehaviour
 
     #endregion
 
-    protected abstract void UseAbility();
+    void MaterialEmissionActive()
+    {
+        if (character.Material == null) return;
+
+        Material originalMaterial = character.Material;
+        Material newMaterial = new Material(originalMaterial);
+
+        newMaterial.EnableKeyword("_EMISSION");
+        newMaterial.SetColor("_EmissionColor", Color.gray);
+        newMaterial.SetFloat("_Emission", -2f);
+        gameObject.transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = newMaterial;
+
+        StartCoroutine(MaterialEmissionDeActive(originalMaterial));
+    }
+
+    IEnumerator MaterialEmissionDeActive(Material mat)
+    {
+        yield return new WaitForSeconds(0.15f);
+        gameObject.transform.GetChild(0).GetChild(0).GetComponent<SkinnedMeshRenderer>().material = mat;
+    }
 
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, character.AttackDistance);
         Gizmos.DrawRay(transform.position, transform.right);
+    }
+
+    IEnumerator DeathController()
+    {
+        anim.Play("Death");
+        isDead = true;
+        col.enabled = false;
+        rb.useGravity = true;
+        
+        audioSource.PlayOneShot(character.DyingSound);
+        Destroy(gameObject, 4f);
+
+        yield return new WaitForSeconds(1f);
+        rb.isKinematic = false;
     }
 
     IEnumerator UISettings()

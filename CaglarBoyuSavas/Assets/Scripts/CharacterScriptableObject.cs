@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CreateCharacter", menuName = "Character")]
@@ -53,7 +51,8 @@ public class CharacterScriptableObject : ScriptableObject
     [Header("Effects")]
     public GameObject AttackVFX;
 
-
+    [Space(10)]
+    public Material Material; 
 
     [Space(10)]
     public LayerMask LayerMask;

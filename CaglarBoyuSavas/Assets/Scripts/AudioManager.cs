@@ -6,7 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     UIManager uiManager;
     public Sound[] sounds;
-    List<AudioSource> audioSourceList = new List<AudioSource>(); 
+    private List<AudioSource> audioSourceList = new List<AudioSource>();
+    private List<float> originalVolumes = new List<float>();
     private static AudioManager _Instance;
 
     private void Awake()
@@ -39,16 +40,24 @@ public class AudioManager : MonoBehaviour
             sound.volume = uiManager.SfxSlider.value;
 
             audioSourceList.Add(sound.source);
+            
         }
 
-        _Instance.Play("Soundtrack1");
+
+        foreach (var audioSource in audioSourceList)
+        {
+            originalVolumes.Add(audioSource.volume);
+        }
     }
 
     public void AdjustAllVolumes(float volume)
     {
-        foreach (var audioSource in audioSourceList)
+        for (int i = 0; i < audioSourceList.Count; i++)
         {
-            audioSource.volume = volume;
+            float originalVolume = originalVolumes[i];
+            float newVolume = originalVolume * volume;
+
+            audioSourceList[i].volume = newVolume;
         }
     }
 

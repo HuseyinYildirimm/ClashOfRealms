@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArcherArrow : MonoBehaviour
@@ -16,7 +15,8 @@ public class ArcherArrow : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && gameObject.CompareTag("SpecialArrow"))
+        if (collision.gameObject.CompareTag("Enemy") && gameObject.CompareTag("SpecialArrow")
+            || collision.gameObject.CompareTag("Character") && gameObject.CompareTag("SpecialArrowEnemy"))
         {
             activeTime = 0f;
             collision.gameObject.GetComponent<Character>().TakeDamage(300f);
@@ -40,5 +40,6 @@ public class ArcherArrow : MonoBehaviour
         gameObject.SetActive(false);
         col.enabled = true;
         rb.isKinematic = false;
+        rb.velocity =Vector3.zero;
     }
 }

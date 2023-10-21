@@ -60,9 +60,11 @@
     <Compile Include="Assets\Scripts\CharactersScript\Knight.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\SpecialAbilities.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Mage.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\Scripts\AITurretManager.cs" />
     <Compile Include="Assets\Scripts\CharacterSpawn.cs" />
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
     <Compile Include="Assets\Store\AurynSky\Desert Pack\Scripts\Rotator.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\Scripts\ArcherArrow.cs" />
     <Compile Include="Assets\Scripts\BloodObjectPool.cs" />
     <Compile Include="Assets\Store\AurynSky\Dungeon Pack\Scripts\TrapDoorDemo.cs" />
+    <Compile Include="Assets\Scripts\TurretSlot.cs" />
     <Compile Include="Assets\Scripts\GameType.cs" />
     <Compile Include="Assets\Scripts\CharacterScriptableObject.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\AnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\DraggableTurret.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Crossbow.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\EnemyBase.cs" />
@@ -89,13 +93,14 @@
     <Compile Include="Assets\Scripts\CharactersScript\Warrior.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Archer.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\TurretManager.cs" />
     <Compile Include="Assets\Store\AurynSky\Desert Pack\Scripts\MaterialMover.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Brute.cs" />
     <Compile Include="Assets\Store\AurynSky\Desert Pack\Scripts\ChestDemo.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\TurretMechanic.cs" />
     <Compile Include="Assets\Scripts\CharactersScript\Hammer.cs" />
     <Compile Include="Assets\Store\UnityTechnologies\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\SpecialAbilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -116,6 +121,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Store\FattyPolyTurretFree\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Store\AurynSky\Desert Pack\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -764,11 +770,17 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -809,8 +821,8 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
@@ -827,14 +839,17 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -851,8 +866,14 @@
     <Reference Include="Unity.Animation.Rigging">
       <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
@@ -886,6 +907,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4776001801688835171}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4776001801689135171
 GameObject:
@@ -63,8 +63,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5499778773759605787}
   - {fileID: 3367984619898769302}
+  - {fileID: 5499778773759605787}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,8 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
+  audioSource: {fileID: 0}
   character: {fileID: 11400000, guid: 449fbfda11df6f84787a89d05078e739, type: 2}
+  audioManager: {fileID: 0}
   bloodOjbect: {fileID: 0}
+  targetCharacter: {fileID: 0}
   currentHealth: 0
   layerMask:
     serializedVersion: 2
@@ -447,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400102, guid: e9332b82da4812a49916bf8fc87b2332, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400102, guid: e9332b82da4812a49916bf8fc87b2332, type: 3}
       propertyPath: m_LocalPosition.x

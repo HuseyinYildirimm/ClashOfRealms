@@ -5,13 +5,13 @@ using UnityEngine;
 public class AICharacterSpawn : MonoBehaviour
 {
     GameManager gameManager;
-    public float minDistance= 2.0f;
+    public float minDistance = 2.0f;
     [HideInInspector] public bool AILevelUp;
 
-    [Header ("Spawn")]
+    [Header("Spawn")]
     public Transform spawnPoint;
-    public CharacterScriptableObject[] charactersToSpawn; 
-    private List<GameObject> AIspawnedCharacters = new List<GameObject>();
+    public CharacterScriptableObject[] charactersToSpawn;
+    [HideInInspector] public List<GameObject> AIspawnedCharacters = new List<GameObject>();
     int i;
 
     [Header("LEVEL")]

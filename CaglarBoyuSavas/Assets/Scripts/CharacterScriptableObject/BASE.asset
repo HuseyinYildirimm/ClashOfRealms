@@ -20,8 +20,8 @@ MonoBehaviour:
   Damage: 0
   AttackDistance: 0
   AttackTimer: 0
-  MaxHealth: 300
-  CurrentHealth: 300
+  MaxHealth: 200
+  CurrentHealth: 200
   Price: 0
   KillReward: 0
   Exp: 0

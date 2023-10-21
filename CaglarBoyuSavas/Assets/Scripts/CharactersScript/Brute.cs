@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Brute : Character
@@ -10,11 +8,8 @@ public class Brute : Character
     {
         GameObject attackVfxClone = Instantiate(character.AttackVFX, attackVfxPoint.position,attackVfxPoint.rotation,attackVfxPoint);
         Destroy(attackVfxClone, 4f);
-      
+
+        if (audioManager != null)
+            audioManager.Play("Punch");
     }
-    public void Update()
-    {
-      
-    }
-    
 }

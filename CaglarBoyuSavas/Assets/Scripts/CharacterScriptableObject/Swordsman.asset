@@ -15,22 +15,23 @@ MonoBehaviour:
   character: {fileID: 2182176130307823620, guid: a8262d56e9bf8e14a82eea1fe31b7caa, type: 3}
   ClassType: 8
   spawnTimer: 8
-  MovementSpeed: 2
+  MovementSpeed: 2.5
   StopDistance: 2
   Damage: 15
   AttackDistance: 2.2
   AttackTimer: 1.5
   MaxHealth: 60
-  CurrentHealth: 69
+  CurrentHealth: 63
   Price: 900
   KillReward: 1000
   Exp: 900
-  AudioSourceVolume: 1
+  AudioSourceVolume: 0.050314285
   AttackSound: {fileID: 8300000, guid: 4a39e49e3bdcf614683f16098b3e1993, type: 3}
   AbilitySound: {fileID: 0}
   TakeDamageSound: {fileID: 8300000, guid: 5ea23b3ee69f5fd499301fb685368d9f, type: 3}
   DyingSound: {fileID: 8300000, guid: 72f5d172c3cb80a4c844b0b1c678fee3, type: 3}
   AttackVFX: {fileID: 0}
+  Material: {fileID: 2100000, guid: 76ebb576ec1d04a41939056baebf3399, type: 2}
   LayerMask:
     serializedVersion: 2
     m_Bits: 72

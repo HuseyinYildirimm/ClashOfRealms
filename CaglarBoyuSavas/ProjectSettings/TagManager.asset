@@ -15,6 +15,13 @@ TagManager:
   - SpecialArrow
   - Ground
   - AbilitiesManager
+  - Slot
+  - Turret
+  - BaseTurret
+  - EnemyTurret
+  - WeakTurret
+  - StrongTurret
+  - SpecialArrowEnemy
   layers:
   - Default
   - TransparentFX

@@ -537,7 +537,7 @@ ModelImporter:
       name: Attack1
       takeName: Take 001
       internalID: 7400000
-      firstFrame: 0
+      firstFrame: 3
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -558,7 +558,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.428212
+      - time: 0.40598977
         functionName: CallDamage
         data: 
         objectReferenceParameter: {instanceID: 0}

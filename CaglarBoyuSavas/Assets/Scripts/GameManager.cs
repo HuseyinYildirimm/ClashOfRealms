@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public CharacterScriptableObject enemyBaseHealth;
 
     [HideInInspector] public bool gameOver;
+    [HideInInspector] public bool Win;
 
     [Header("LevelSettings")]
     public int difficultyLevel;
@@ -85,7 +86,6 @@ public class GameManager : MonoBehaviour
         Level2Base.SetActive(false);
 
         HealthByLevel();
-
     }
 
     public void Update()
@@ -95,6 +95,12 @@ public class GameManager : MonoBehaviour
         {
             BaseCurrentHealth = 0f;
             gameOver = true;
+        }
+
+        if(EnemyCurrentHealth <= 0)
+        {
+            EnemyCurrentHealth = 0f;
+            Win = true;
         }
 
         #region Money
@@ -124,7 +130,7 @@ public class GameManager : MonoBehaviour
         }
         if (aiLevel.AILevelUp && !isEnemeyLevelUp)
         {
-            EnemyMaxHealth += 500f;
+            EnemyMaxHealth += 400f;
             EnemyCurrentHealth = EnemyMaxHealth;
             enemyBaseHealth.MaxHealth = EnemyMaxHealth;
             enemyBaseHealth.CurrentHealth = EnemyCurrentHealth;
@@ -145,7 +151,7 @@ public class GameManager : MonoBehaviour
     
     void LevelUp()
     {
-        baseHealth.MaxHealth += 400f;
+        baseHealth.MaxHealth += 300f;
         baseHealth.CurrentHealth = baseHealth.MaxHealth;
         BaseMaxHealth = baseHealth.MaxHealth;
         BaseCurrentHealth = baseHealth.CurrentHealth;
@@ -173,7 +179,7 @@ public class GameManager : MonoBehaviour
 
         else enemyBaseHealth.MaxHealth = 500f;
 
-        baseHealth.MaxHealth = 300f;
+        baseHealth.MaxHealth = 200f;
 
         enemyBaseHealth.CurrentHealth = enemyBaseHealth.MaxHealth;
         EnemyMaxHealth = enemyBaseHealth.MaxHealth;

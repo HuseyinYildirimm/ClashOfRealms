@@ -707,11 +707,17 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -752,8 +758,8 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
@@ -770,14 +776,17 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -794,8 +803,14 @@
     <Reference Include="Unity.Animation.Rigging">
       <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
@@ -829,6 +844,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
